@@ -207,7 +207,7 @@ button:focus {
   background: #fff;
   width: 100%;
   line-height: 1;
-  padding: 15px 15px 10px 100px;
+  padding: 15px 15px 10px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
