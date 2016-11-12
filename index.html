@@ -1,48 +1,94 @@
 <!DOCTYPE html>
-<html lang="ja"> 
-<head>
-  <meta charset="UTF-8">
-  <title>jQuery Code</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-</head>
-<body>
-  <div class="container">
-    <h1>jQuery Code</h1>
-    <hr>
+<!--[if IE 9]><html class="no-js ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js"><!--<![endif]-->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Flexible Calendar</title>
+		<meta name="description" content="Flexible Calendar with jQuery and CSS3" />
+		<meta name="keywords" content="responsive, calendar, jquery, plugin, full page, flexible, javascript, css3, media queries" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/calendar.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom_1.css" />
+		<script src="js/modernizr.custom.63321.js"></script>
+	</head>
+	<body>
+		<div class="container">	
+			<!-- Codrops top bar -->
+			<div class="codrops-top clearfix">
+				<a href="http://tympanus.net/Development/Stapel/"><strong>&laquo; Previous Demo: </strong>Adaptive Thumbnail Pile Effect</a>
+				<span class="right">
+					<a href="http://tympanus.net/codrops/?p=12416"><strong>Back to the Codrops Article</strong></a>
+				</span>
+			</div><!--/ Codrops top bar -->
+			<div class="custom-calendar-wrap custom-calendar-full">
+				<div class="custom-header clearfix">
+					<h2>Flexible Calendar <span><span>Demo 1</span> | <a href="index2.html">Demo 2</a></span></h2>
+					<h3 class="custom-month-year">
+						<span id="custom-month" class="custom-month"></span>
+						<span id="custom-year" class="custom-year"></span>
+						<nav>
+							<span id="custom-prev" class="custom-prev"></span>
+							<span id="custom-next" class="custom-next"></span>
+							<span id="custom-current" class="custom-current" title="Got to current date"></span>
+						</nav>
+					</h3>
+				</div>
+				<div id="calendar" class="fc-calendar-container"></div>
+			</div>
+		</div><!-- /container -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.calendario.js"></script>
+		<script type="text/javascript" src="js/data.js"></script>
+		<script type="text/javascript">	
+			$(function() {
+			
+				var cal = $( '#calendar' ).calendario( {
+						onDayClick : function( $el, $contentEl, dateProperties ) {
 
-    <ul id="main-list">
-    </ul>
+							for( var key in dateProperties ) {
+								console.log( key + ' = ' + dateProperties[ key ] );
+							}
 
-  </div>
-  <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <script src="list-data.js"></script>
-  <script>
-  $(function (){
-    var root_path = 'http://okutani-t.github.io/jQuery-code/';
+						},
+						caldata : codropsEvents
+					} ),
+					$month = $( '#custom-month' ).html( cal.getMonthName() ),
+					$year = $( '#custom-year' ).html( cal.getYear() );
 
-    $.each(list, function(i, item) {
-      var dir_name = item.dir_name;
-      $('#main-list').append('<li><h4>' + dir_name + '</h4></li>');
-      // ul>liの作成
-      var str = '';
-      $.each(item.files, function(i, file) {
-        var url = root_path + dir_name + '/' + file;
-        if (i === 0) {
-          str = '<ul>';
-        }
+				$( '#custom-next' ).on( 'click', function() {
+					cal.gotoNextMonth( updateMonthYear );
+				} );
+				$( '#custom-prev' ).on( 'click', function() {
+					cal.gotoPreviousMonth( updateMonthYear );
+				} );
+				$( '#custom-current' ).on( 'click', function() {
+					cal.gotoNow( updateMonthYear );
+				} );
 
-        str += '<li><a href="' + url + '" target="_blank">' + url + '</a></li>';
+				function updateMonthYear() {				
+					$month.html( cal.getMonthName() );
+					$year.html( cal.getYear() );
+				}
 
-        if (i === item.files.length -1) {
-          str += '</ul>';
-          $('#main-list').append(str);
-        }
-      });
-    });
+				// you can also add more data later on. As an example:
+				/*
+				someElement.on( 'click', function() {
+					
+					cal.setData( {
+						'03-01-2013' : '<a href="#">testing</a>',
+						'03-10-2013' : '<a href="#">testing</a>',
+						'03-12-2013' : '<a href="#">testing</a>'
+					} );
+					// goes to a specific month/year
+					cal.goto( 3, 2013, updateMonthYear );
 
-  });
-
-  </script>
-</body>
+				} );
+				*/
+			
+			});
+		</script>
+	</body>
 </html>
