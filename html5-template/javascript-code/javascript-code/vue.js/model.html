@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>vue.js test</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <h1>vue.jsのテスト</h1>
+    <form action="">
+      <div id="myapp" class="input-group">
+        <p>
+          <input type="text" v-model="name" class="form-control">
+          {{name | uppercase}}<br>
+          {{name | capitalize}}
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" v-model="isAdmin">
+            {{isAdmin ? "admin!" : "not admin!"}}
+          </label>
+        </p>
+        <p>
+          <input type="radio" v-model="phone" name="phone" value="iphone">
+          <input type="radio" v-model="phone" name="phone" value="android">
+          {{phone}}
+        </p>
+        <p>
+          <select v-model="city" class="form-control">
+            <option value="tokyo">tokyo</option>
+            <option value="kyoto">kyoto</option>
+            <option value="osaka">osaka</option>
+          </select>
+          {{city}}
+        </p>
+        <p>{{$data | json}}</p>
+      </div>
+    </form>
+
+  </div>
+  <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/0.11.4/vue.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.20/vue.min.js"></script>
+  <script>
+  // v-repeat
+  new Vue({
+    el: '#myapp',
+    data: {
+      name: 'okutani',
+      isAdmin: true,
+      phone: 'iphone',
+      city: 'tokyo',
+      users: [
+        {name: 'taguchi', score: 81},
+        {name: 'fkoji', score: 92},
+        {name: 'okutani', score: 64}
+      ]
+    }
+  })
+  </script>
+</body>
+</html>

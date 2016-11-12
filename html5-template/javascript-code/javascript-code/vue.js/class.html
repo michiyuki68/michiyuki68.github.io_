@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>vue.js test</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <style>
+  .red { color: red }
+  .bold { font-weight: bold }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>vue.jsのテスト</h1>
+
+    <div id="myapp">
+      <!-- <div v-if="showContent"> -->
+      <div v-bind:class="{ red: isRed, bold: isBold }">
+        {{content}}
+      </div>
+    </div>
+
+  </div>
+  <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/0.11.4/vue.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.20/vue.min.js"></script>
+  <script>
+  // v-class
+  var vm = new Vue({
+    el: '#myapp',
+    data: {
+      content: 'hello world',
+      // myStyle: 'red',
+      isRed: true,
+      isBold: true
+    }
+  })
+  </script>
+</body>
+</html>

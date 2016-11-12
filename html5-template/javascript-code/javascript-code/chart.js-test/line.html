@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Chart.js TEST</title>
+  <meta charset="UTF-8">
+</head>
+<style>
+* { box-sizing: border-box }
+li { list-style-type: none }
+li:before {
+  content: "";
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+li.my-weight:before {
+  background: rgba(221,156,180,0.6);
+}
+li.your-weight:before {
+  background: rgba(143,183,221,0.6);
+}
+</style>
+<body>
+  <h1>1年間のPV数の推移</h1>
+
+  <div style="width: 100%;float: left">
+    <canvas id="line-chart" height="300" width="900"></canvas>
+  </div>
+  <div style="width: 20%;float: right;padding: 50px">
+    <ul style="width: 200px;padding: 20px;box-shadow: 1px 1px 4px 1px #ccc">
+      <li class="my-weight">私の体重推移</li>
+      <li class="your-weight">彼の体重推移</li>
+    </ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+  <!-- もしくは<script src="Chart.js"></script> -->
+  <script>
+  var lineChartData = {
+    labels : ["1ヶ月","2ヶ月","3ヶ月","4ヶ月","5ヶ月","6ヶ月", "7ヶ月", "8ヶ月", "9ヶ月", "10ヶ月", "11ヶ月", "12ヶ月"],
+    datasets : [
+      {
+        label: "私",
+        fillColor : /*"#f2dae8"*/"rgba(242,218,232,0.6)",
+        strokeColor : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        pointColor : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        pointStrokeColor : "#fff",
+        pointHighlightFill : "#fff",
+        pointHighlightStroke : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        data : [1200, 1230, 5156, 16840, 25553, 55133, 79972, 92805, 86341, 84420, 100112, 103233]
+      }
+    ]
+
+  }
+
+  window.onload = function(){
+    var ctx = document.getElementById("line-chart").getContext("2d");
+    window.myLine = new Chart(ctx).Line(lineChartData, {
+      responsive: true,
+      // 下記を追加すると線がまっすぐになります
+      bezierCurve: false,
+      // アニメーション停止
+      // animation: false
+      scaleOverride: true,
+      scaleFontSize: 24,
+      scaleStepWidth: 11000,
+      scaleSteps: 10,
+    });
+  }
+
+  </script>
+</body>
+</html>
