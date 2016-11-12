@@ -228,7 +228,7 @@ button:focus {
   display: block;
   width: 25px;
   height: 25px;
-  top: 140px;
+  top: 400px;
   left: 14px;
   cursor: pointer;
   background: none;
@@ -771,7 +771,7 @@ button:focus {
   background: none;
   margin: 0;
   z-index: 100;
-  top: 0;
+  top: 400;
   right: 0;
   font-size: 18px;
   color: #ddd;
