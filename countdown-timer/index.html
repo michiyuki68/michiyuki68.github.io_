@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown Timer</title>
+  <link href='https://fonts.googleapis.com/css?family=Tillana:500,400' rel='stylesheet' type='text/css'>
+  <style>
+  body {
+    font-family: 'Tillana', cursive;
+    background: #222;
+    text-align: center;
+    font-size: 36px;
+    color: tomato;
+  }
+  h1 {
+    color: #fff;
+    font-size: 128px;
+  }
+  #remainingDays,
+  #remainingTime {
+    font-size: 52px;
+  }
+  </style>
+</head>
+<body>
+  <h1>Q</h1>
+  <p>
+    <span id="remainingDays"></span> days <span id="remainingTime"></span> to go...
+  </p>
+  <script>
+  function getResult() {
+
+    // 現在時刻とターゲットの時刻の差を算出
+    // 月は-1しておく
+    var target = new Date(2016, 6, 8, 13, 0, 0).getTime();
+    var now = Date.now();
+    var diff = (target - now) / 1000;
+
+    // 残り日数や時間を計算
+    var d = Math.floor(diff / 60 / 60 / 24);
+    diff = diff - 60 * 60 * 24 * d;
+    var h = Math.floor(diff / 60 / 60);
+    diff = diff - 60 * 60 * h;
+    var m = Math.floor(diff / 60);
+    diff = diff - 60 * m;
+    var s = Math.floor(diff);
+
+    // 表示
+    document.getElementById('remainingDays').innerHTML = d;
+    document.getElementById('remainingTime').innerHTML = padZero(h) + ':' + padZero(m) + ':' + padZero(s);
+
+    // 繰り返し処理
+    setTimeout(function() {
+      getResult();
+    }, 200);
+  }
+
+  // 0で埋める
+  function padZero(n) {
+    return (n < 10) ? '0' + n : n;
+  }
+  getResult();
+  </script>
+</body>
+</html>

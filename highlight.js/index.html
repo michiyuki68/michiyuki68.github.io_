@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>highlight.js</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/solarized_dark.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/agate.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/arta.min.css"> -->
+  <style>
+  .hljs {
+    font-size: 16px;
+    font-family: Arial, Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+    /*font-weight: bold;*/
+    /*display: block;*/
+    word-wrap: normal;
+    overflow-x: scroll;
+    padding: 0 25px;
+    line-height:1.4;
+    background: #222;
+    letter-spacing: 1px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>highlight.jsのテスト</h1>
+    <!-- https://cdnjs.com/libraries/highlight.js/ -->
+    <pre><code>
+&lt;p&gt;yahoo!&lt;/p&gt;
+&lt;div class&gt;
+  &lt;p&gt;&lt;span&gt;google&lt;/span&gt;!yes&lt;/p&gt;
+&lt;/div&gt;
+    </code></pre>
+    <pre>
+      <code>
+function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+    return process(block, true, 0x0F) +
+    ' class=""';
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+    return /\d+[\s/]/g;
+  }
+}
+      </code>
+    </pre>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+  <script>
+  hljs.initHighlightingOnLoad();
+  // $(document).ready(function() {
+  //   $('pre code').each(function(i, block) {
+  //     hljs.highlightBlock(block);
+  //   });
+  // });
+  </script>
+</body>
+</html>
