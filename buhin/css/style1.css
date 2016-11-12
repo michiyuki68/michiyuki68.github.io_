@@ -376,8 +376,8 @@ button:focus {
 .grid__item--loading .loader::before {
   -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 0.2);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 0.2);
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
