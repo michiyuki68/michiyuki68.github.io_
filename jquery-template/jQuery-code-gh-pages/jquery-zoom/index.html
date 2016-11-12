@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Zoom</title>
+  <style>
+  img {
+    border: 2px solid #ccc;
+  }
+  </style>
+</head>
+<body>
+
+  <img class="zoom" src="1.jpg" alt="エリキャTシャツ" width="150">
+  <img src="2.jpg" alt="エリキャTモデル" width="150">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.18/jquery.zoom.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('img.zoom')
+    .wrap('<span style="display:inline-block"></span>')
+    .css('display', 'block')
+    .parent()
+    .zoom();
+  });
+  </script>
+</body>
+</html>

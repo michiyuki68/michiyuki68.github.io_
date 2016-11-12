@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>カレンダー</title>
+  <style>
+  body {
+    text-align: center;
+    font-size: 22px;
+  }
+  table, td, th {
+    margin: 0 auto;
+    border:1px solid #ccc;
+    font-size: 24px;
+  }
+  td, th {
+    padding: 10px;
+  }
+  .opa5 {
+    opacity: 0.5;
+  }
+  .pager-box {
+    width: 300px;
+    height: 30px;
+    margin: 10px auto;
+    text-align: center;
+  }
+  a {
+    margin: 0 40px;
+  }
+  .sun {
+    color: red;
+  }
+  .sat {
+    color: blue;
+  }
+  .lpager, .rpager {
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+
+  <h1>jsとjQueryを使ったカレンダー</h1>
+  <div class="pager-box"><span class="lpager">&laquo; </span><span class="calh"></span><span class="rpager"> &raquo;</span></div>
+  <table>
+  </table>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script>
+
+  // 現在の日付
+  var date = new Date();
+  // 年の取得
+  var year = date.getFullYear();
+  // 月の取得(0=1月)
+  var month = date.getMonth();
+  // 今月1日のデータをセット
+  date.setDate(1);
+  // 1日の曜日を取得(0=日曜日)
+  var week = date.getDay();
+  // リンク比較用年月日のStringリスト
+  var viewing_ymd = [];
+
+  // 曜日、月の日付をセット
+  var weekTbl = new Array( "日", "月", "火", "水", "木", "金", "土" );
+  var monthTbl = new Array( 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 );
+
+  // main関数
+  $(function (){
+    // 現在の年と月を取得(戻り値はオブジェクト型)
+    var ym = getYearMonth( 0 );
+    // カレンダーテーブルの生成
+    createCal( ym.y, ym.m );
+
+    // 日付を取得してIconを付属
+    getViewingYmd( ym.y, ym.m );
+    addIconToCell();
+
+    // ページャークリック時の処理
+    $(".lpager").click(function () {
+      // 添付したimgの除去
+      $("tbody tr td br, tbody tr td img").remove();
+
+      ym = getYearMonth( -1 );
+      createCal( ym.y, ym.m );
+      // 日付を取得してIconを付属
+      getViewingYmd( ym.y, ym.m );
+      addIconToCell();
+    });
+    $(".rpager").click(function () {
+      // 添付したimgの除去
+      $("tbody tr td br, tbody tr td img").remove();
+
+      ym = getYearMonth( 1 );
+      createCal( ym.y, ym.m );
+      // 日付を取得してIconを付属
+      getViewingYmd( ym.y, ym.m );
+      addIconToCell();
+    });
+  });
+
+  // 取得した年と月を使ってカレンダーテーブルを作成
+  function createCal( y, m ) {
+
+    // tableの要素を空に
+    $("table").empty();
+
+    // カレンダーの見出しを表示
+    $(".calh").text( getCalHead( y, m ) );
+
+    // カレンダー生成で使うデータの前処理
+    var table = prepareCal( y, m );
+
+    // tableにtheadとtrをappend
+    $("table").append("<thead><tr></tr></thead>");
+    // 曜日をテーブルに出力
+    $.each( weekTbl, function(i, w){
+      $("thead tr").append("<th>" + w + "</th>");
+      if( i == 0 ) $("th").addClass("sun");
+    });
+
+    // tableにtbodyをappend
+    $("table").append("<tbody></tbody>");
+    // 日付をテーブルに出力
+    $.each( table, function(i, d){
+      if( i == 0 || i % 7 == 0 ){
+        $("tbody").append("<tr></tr>");
+      }
+      $("tbody tr:last").append("<td>" + d + "</td>");
+    });
+
+    addColor();
+
+    addOpacity();
+  }
+
+  // カレンダーで利用するデータの準備
+  function prepareCal( y, m ){
+    // dateオブジェクトの取得
+    date = new Date( y, m );
+    // 年の取得(2015)
+    year = date.getFullYear();
+    // 月の取得(0=1月)
+    month = date.getMonth();
+    // 今月1日のデータをセット
+    date.setDate(1);
+    // 1日の曜日を取得(0=日曜日)
+    week = date.getDay();
+
+    // うるうどしの計算
+    monthTbl[1] = calUruu( year );
+
+    // 総マス数の計算
+    var tblLine = Math.ceil( ( week + monthTbl[month] ) / 7 );
+    // マス目の数配列を作成
+    var table = new Array( 7 * tblLine );
+
+    // 先月の日付(後ろから)を左上の開いたマスに挿入
+    table = getAryPreDay( week, table );
+
+    // 当月の日付挿入
+    for( var i = 0; i < monthTbl[month]; i++ ){
+      table[week + i] = i + 1;
+    }
+
+    // 来月の日付(前から)を右下の空いたマスに挿入
+    getAryNextDay( table );
+
+    return table;
+  }
+
+  // テーブル左上のマスを穴埋めする処理(先月)
+  function getAryPreDay( week, table ){
+    // weekが0であれば空欄はない->return
+    if( week == 0 ) return table;
+    // 先月データ取得処理
+    var pMon = month -1;
+    if( pMon < 0 ) pMon = 11;
+    var pDay = monthTbl[pMon];
+    var aryDay = [];
+    for( var i = 0; i < week; i++ ){
+      table.splice( i, 1, ( pDay - week + i + 1 ) )
+    }
+
+    return table;
+  }
+
+  // テーブルに穴埋めする日付(来月)
+  function getAryNextDay( table ){
+    var j = 1;
+    for( var i = 0; i < table.length; i++ ){
+      if( !( table[i] ) ){
+        table[i] = j;
+        j++;
+      }
+    }
+
+    return table
+  }
+
+  // 年と月を返す関数(戻り値はオブジェクト)
+  // ページャーと併用している->pagerには0,-1,1のいずれかが入る
+  function getYearMonth( pager ) {
+    month += pager;
+    // 去年と来年に飛ばす処理
+    if( month < 0 ){
+      year--;
+      month = 11;
+    }else if( month > 11 ) {
+      year++;
+      month = 0;
+    }
+
+    return { y:year, m:month }
+  }
+
+  // カレンダー見出しの取得
+  // 例: 2015年7月を文字列で取得
+  function getCalHead( y, m ){
+    var ch = y + "年" + ( "0" + ( m + 1 ) ).slice(-2) + "月";
+    return ch;
+  }
+
+  // うるう年の計算
+  function calUruu( year ){
+    if( ( ( year % 4 ) == 0 && ( year % 100 ) != 0 ) || ( year % 400 ) == 0 ){
+      return 29;
+    }else {
+      return 28;
+    }
+  }
+
+  // 土曜と日曜列に色を付ける
+  function addColor(){
+    // 日曜を赤に
+    $("tr th:first").addClass("sun");
+    $("tr td:first-child").addClass("sun");
+    // 土曜を青に
+    $("tr th:last").addClass("sat");
+    $("tr td:last-child").addClass("sat");
+  }
+
+  // 当月以外の日付を半透明にする
+  function addOpacity(){
+    // 先月の日付の透過処理
+    $("tbody tr:first td:lt(" + week + ")").addClass("opa5");
+    // 来月の日付の透過処理
+    $("tbody tr:last td").each(function(){
+      var p = $(this).text();
+      if( Number(p) < 7 ){
+        $(this).addClass("opa5");
+      }
+    });
+  }
+
+  // 当月のcellの数を数え、2015/10/3の形で配列に入れる
+  function getViewingYmd( y, m ){
+    viewing_ymd = [];
+    td_cnt = $("tbody tr td:not(.opa5)").length;
+    for(var i = 0; i < td_cnt; i++ ){
+      var d = $("tbody tr td:not(.opa5)").eq(i).text();
+      viewing_ymd.push(y + "/" + (m + 1) + "/" + d);
+    }
+  }
+
+  // アイコンを設置
+  function addIconToCell(){
+    var ymd = "2015/9/11";
+    var cal_index = $.inArray(ymd, viewing_ymd);
+    if(cal_index >= 0){
+      $("tbody tr td:not(.opa5)").eq(cal_index).append("<br><img src='icon.png'>");
+    }
+  }
+
+  </script>
+</body>
+</html>

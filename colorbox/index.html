@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>colorbox test</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.3/css/fluidbox.min.css">
+  <link rel="stylesheet" href="colorbox.css">
+</head>
+<body>
+  <div id="users" class="container">
+    <h1>Colorbox!</h1>
+    <div class="row">
+      <div class="col-sm-3">
+        <a class="colorbox" href="http://placehold.it/400x400/00aaff/" title="aaa">
+          <img src="http://placehold.it/400x400/00aaff/" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a class="colorbox" href="2.jpg" title="女の人1">
+          <img src="2.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a class="colorbox" href="3.jpg" title="女の人2">
+          <img src="3.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a class="colorbox" href="4.jpg" title="女の人3">
+          <img src="4.jpg" alt="" width="100%">
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <a class="colorbox" href="1.jpg">
+          <img src="1.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a class="colorbox" href="2.jpg">
+          <img src="2.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a class="colorbox" href="3.jpg">
+          <img src="3.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a class="colorbox" href="4.jpg">
+          <img src="4.jpg" alt="" width="100%">
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <a class="colorbox" href="1.jpg">
+          <img src="1.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a class="colorbox" href="2.jpg">
+          <img src="2.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a class="colorbox" href="3.jpg">
+          <img src="3.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a class="colorbox" href="4.jpg">
+          <img src="4.jpg" alt="" width="100%">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.3/i18n/jquery.colorbox-ja.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.3/jquery.colorbox-min.js"></script>
+  <script>
+  $(function() {
+    $(".colorbox").colorbox({
+      maxWidth:"90%",
+      maxHeight:"90%",
+      opacity: 0.7,
+      rel:'group2',
+      transition:"fade"
+    });
+  });
+  </script>
+</body>
+</html>

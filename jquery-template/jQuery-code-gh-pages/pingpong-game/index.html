@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ピンポンゲーム</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <style>
+  body {
+    margin: 0;
+    font-family: "Century Gothic";
+    font-size: 16px;
+    background: #333;
+  }
+  h1 {
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
+    color: #eee;
+    font-family: "League Gothic", Impact, sans-serif;
+    letter-spacing: 0.02em;
+    font-size: 100px;
+  }
+  #container {
+    text-align: center;
+  }
+  #mycanvas {
+    background: #AAEDFF;
+  }
+  #btn {
+    margin: 3px auto;
+    width: 200px;
+    padding: 5px;
+    background: #00AAFF;
+    color: #FFFFFF;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  #btn:hover {
+    opacity: 0.8;
+  }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Ping Pong Game!</h1>
+    <canvas width="280" height="280" id="mycanvas">
+      Canvasに対応したブラウザを用意してください。
+    </canvas>
+    <div id="btn">START</div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+  $(function() {
+    var ctx,
+    myPaddle,
+    myBall,
+    score,
+    scoreLabel,
+    mouseX,
+    isPlaying = false,
+    timerId;
+
+    var canvas = document.getElementById('mycanvas');
+    if (!canvas || !canvas.getContext) return false;
+    ctx = canvas.getContext('2d');
+
+    var Label = function(x, y) {
+      this.x = x;
+      this.y = y;
+      this.draw = function(text) {
+        ctx.font = 'bold 14px "Century Gothic"';
+        ctx.fillStyle = '#00AAFF';
+        ctx.textAlign = 'left';
+        ctx.fillText(text, this.x, this.y);
+      }
+    }
+
+    var Ball = function(x, y, vx, vy, r) {
+      this.x = x;
+      this.y = y;
+      this.vx = vx;
+      this.vy = vy;
+      this.r = r;
+      this.draw = function() {
+        ctx.beginPath();
+        ctx.fillStyle = '#FF0088';
+        ctx.arc(this.x, this.y, this.r, 0, 2*Math.PI, true);
+        ctx.fill();
+      };
+      this.move = function() {
+        this.x += this.vx;
+        this.y += this.vy;
+        // 左端 or 右端
+        if (this.x + this.r > canvas.width || this.x - this.r < 0) {
+          this.vx *= -1;
+        }
+        // 上
+        if (this.y - this.r < 0) {
+          this.vy *= -1;
+        }
+        // 下
+        if (this.y + this.r > canvas.height) {
+          // alert("game over");
+          isPlaying = false;
+          $('#btn').text('REPLAY?').fadeIn();
+        }
+      };
+      this.checkCollision = function(paddle) {
+        if ((this.y + this.r > paddle.y && this.y + this.r < paddle.y + paddle.h)
+            && (this.x > paddle.x - paddle.w /2 && this.x < paddle.x + paddle.w / 2)) {
+          this.vy *= -1;
+          score++;
+          if (score % 3 === 0) {
+            this.vx *= 1.2;
+            paddle.w *= 0.8;
+          }
+        }
+      }
+    }
+
+    var Paddle = function(w, h) {
+      this.w = w;
+      this.h = h;
+      this.x = canvas.width / 2;
+      this.y = canvas.height - 30;
+      this.draw = function() {
+        ctx.fillStyle = '#00AAFF';
+        ctx.fillRect(this.x - this.w / 2, this.y, this.w, this.h);
+      };
+      this.move = function() {
+        this.x = mouseX - $('#mycanvas').offset().left;
+      };
+    };
+
+    function rand(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function init() {
+      score = 0;
+      isPlaying = true;
+      myPaddle = new Paddle(100, 10);
+      myBall = new Ball(rand(50, 250), rand(10, 80), rand(3, 8), rand(3, 8), 6);
+      scoreLabel = new Label(10, 25);
+      scoreLabel.draw('SCORE: ' + score);
+    }
+
+    function update() {
+      clearStage();
+      scoreLabel.draw('SCORE: ' + score);
+      myPaddle.draw();
+      myPaddle.move();
+      myBall.draw();
+      myBall.move();
+      myBall.checkCollision(myPaddle);
+      timerId = setTimeout(function() {
+        update();
+      }, 30);
+      if (!isPlaying) clearTimeout(timerId);
+    }
+
+    function clearStage() {
+      ctx.fillStyle = '#AAEDFF';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    $('#btn').click(function() {
+      $(this).fadeOut();
+      init();
+      update();
+    });
+
+    $('body').mousemove(function(e) {
+      mouseX = e.pageX;
+    });
+  });
+  </script>
+</body>
+</html>

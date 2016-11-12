@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>アコーディオンメニュー</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <style>
+  /*PCサイズ時のサイドメニュー*/
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  ul#ac_menu{
+    width: 250px;
+    border: 1px solid #aaa;
+  }
+  ul#ac_menu li a{
+    display: block;
+    position:relative;
+    padding: 10px;
+    border: 1px dotted #bbb;
+  }
+  ul#ac_menu li > a.chevron:after{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -8px;
+    content: "\f054";
+    font-family: FontAwesome;
+    transition: all 0.4s linear;
+  }
+  ul#ac_menu li > a.opened:after{
+    transform: rotate(90deg);
+    transition: all 0.4s linear;
+  }
+  li > ul{
+    display: none;
+    background: orange;
+  }
+
+  /*スマートフォンサイズ時に使うハンバーガーメニュー*/
+  #sm_bars_menu ul{
+    display: none;
+  }
+  @media screen and (min-width: 776px){
+    #sm_bars_menu{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 776px){
+    #ac_menu{
+      display: none;
+    }
+    #sm_bars_menu{
+      display: block;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>アコーディオンメニューの実装</h1>
+
+    <ul id="ac_menu">
+      <li>
+        <a href="#" class="chevron">あああ</a>
+        <ul>
+          <li><a href="#">あああ1</a></li>
+          <li><a href="#">あああ2</a></li>
+          <li><a href="#">あああ3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="chevron">いいい</a>
+        <ul>
+          <li><a href="#">いいい1</a></li>
+          <li><a href="#">いいい2</a></li>
+          <li><a href="#">いいい3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">ううう</a>
+      </li>
+      <li>
+        <a href="#" class="chevron">えええ</a>
+        <ul>
+          <li><a href="#">えええ1</a></li>
+          <li><a href="#">えええ2</a></li>
+          <li><a href="#">えええ3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">おおお</a>
+      </li>
+    </ul>
+
+    <div id="sm_bars_menu">
+      <a href="#"><i class="fa fa-bars"></i></a>
+      <ul>
+        <li>
+          <a href="#">あああ</a>
+        </li>
+        <li>
+          <a href="#">いいい</a>
+        </li>
+        <li>
+          <a href="#">ううう</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+  $(function(){
+    // PC サイドバー
+    $("#ac_menu li .chevron").on("click", function() {
+      $(this).next().slideToggle();
+      $(this).toggleClass("opened");
+    });
+    // スマホ用 ハンバーガーメニュー
+    $("#sm_bars_menu > a").on("click", function() {
+      $(this).next().slideToggle();
+    });
+  });
+  </script>
+</body>
+</html>

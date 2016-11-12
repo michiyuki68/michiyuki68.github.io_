@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>jQueryのテスト</title>
+</head>
+<body>
+  <p>jQueryの練習</p>
+  <ul id="main">
+    <li>0</li>
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li>3
+      <ul id="sub">
+        <li>3-0</li>
+        <li>3-1</li>
+        <li class="item">3-2</li>
+        <li class="item">3-3</li>
+        <li>3-4</li>
+
+      </ul></li>
+
+    </ul>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+    $(function() {
+      // $('p').css('color', 'red');
+      // $('#sub').css('color', 'red');
+      // $('p, .item').css('color', 'blue');
+      // $('#sub > li:eq(2)').css('color', 'blue');
+      // $('#sub > li:odd').css('color', 'blue');
+      $('#sub').parent().css('color', 'red');
+      if (confirm( "削除します\nよろしいですか？") == true) {
+        alert( "ok, 消しておくよ" );
+      } else {
+
+      }
+    });
+    </script>
+  </body>
+  </html>

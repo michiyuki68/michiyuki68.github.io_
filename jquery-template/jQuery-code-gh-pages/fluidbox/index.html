@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fluidbox test</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.3/css/fluidbox.min.css">
+  <style>
+  .fluidbox__overlay {
+    background-color: rgba(0,120,187,.45);
+  }
+  </style>
+</head>
+<body>
+  <div id="users" class="container">
+    <h1>FluidBox!</h1>
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="http://placehold.it/400x400/00aaff/" title="aaa">
+          <img title="aaa" src="http://placehold.it/400x400/00aaff/" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a href="2.jpg">
+          <img src="2.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a href="3.jpg">
+          <img src="3.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a href="4.jpg">
+          <img src="4.jpg" alt="" width="100%">
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="1.jpg">
+          <img src="1.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a href="2.jpg">
+          <img src="2.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a href="3.jpg">
+          <img src="3.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a href="4.jpg">
+          <img src="4.jpg" alt="" width="100%">
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="1.jpg">
+          <img src="1.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a href="2.jpg">
+          <img src="2.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a href="3.jpg">
+          <img src="3.jpg" alt="" width="100%">
+        </a>
+      </div>
+      <div class="col-sm-3">
+        <a href="4.jpg">
+          <img src="4.jpg" alt="" width="100%">
+        </a>
+      </div>
+    </div>
+<button class="btn">aaa</button>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.3/js/jquery.fluidbox.min.js"></script>
+  <script>
+  // https://github.com/terrymun/Fluidbox
+  $(function () {
+    $('a').fluidbox({
+      viewportFill: 0.9,
+      maxWidth: 800,
+      immediateOpen: true,
+    });
+
+    $('button').click(function(e) {
+        e.preventDefault();
+
+        // Construct new image
+        var $newContent = $('<div><p>This is a new image that is dynamically-added to the page.</p><a href="http://placehold.it/500x500" title="" data-fluidbox><img src="http://placehold.it/200x200" alt="Alternate Text" title="Image Title" /></a></div>');
+
+        // Insert new content object into DOM, and then apply .fluidbox to it
+        $(this).after($newContent).next().find('a[data-fluidbox]').fluidbox();
+    });
+  });
+  </script>
+</body>
+</html>

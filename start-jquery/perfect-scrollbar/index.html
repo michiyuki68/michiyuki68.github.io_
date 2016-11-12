@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>perfect-scrollbar</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.7/css/perfect-scrollbar.min.css"> -->
+  <link rel="stylesheet" href="perfect-scrollbar.css">
+  <style>
+  body {
+    width: 940px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .img {
+    background-image: url('img.jpg');
+    width: 1500px;
+    height: 1000px;
+  }
+  #pscroll {
+    position:relative;
+    width: 650px;
+    height: 400px;
+    overflow: hidden;
+  }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.7/js/min/perfect-scrollbar.min.js"></script> -->
+  <script src="perfect-scrollbar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <!-- <script src="jquery.mousewheel.min.js"></script> -->
+  <script>
+  $(function() {
+    $('#pscroll').perfectScrollbar();
+  });
+  </script>
+</head>
+
+<body>
+  <h1>perfect-scrollbarのテスト</h1>
+
+  <div id='pscroll'>
+    <div class="img"></div>
+  </div>
+
+</body>
+</html>

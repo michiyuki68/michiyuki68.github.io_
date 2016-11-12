@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>slick test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+    <style>
+     body {
+       max-width: 700px;
+       margin: 0 auto;
+     }
+     .slick-prev:before,
+     .slick-next:before {
+       color: #aaa;
+     }
+    </style>
+  </head>
+  <body>
+    <h1>Slickのテスト</h1>
+
+    <div class="slick1">
+      <img src="images/mv01.jpg" alt="">
+      <img src="images/mv02.jpg" alt="">
+      <img src="images/mv03.jpg" alt="">
+    </div>
+
+    <div class="slick2">
+      <img src="images/hq-001w.jpg" alt="">
+      <img src="images/hq-001n.jpg" alt="">
+      <img src="images/hq-002g.jpg" alt="">
+      <img src="images/hq-003w.jpg" alt="">
+    </div>
+
+    <div class="slick3">
+      <img src="images/hq-001w.jpg" alt="">
+      <img src="images/hq-001n.jpg" alt="">
+      <img src="images/hq-002g.jpg" alt="">
+      <img src="images/hq-003w.jpg" alt="">
+      <img src="images/hq-004n.jpg" alt="">
+    </div>
+    <div class="slick4">
+      <img src="images/hq-001w.jpg" alt="">
+      <img src="images/hq-001n.jpg" alt="">
+      <img src="images/hq-002g.jpg" alt="">
+      <img src="images/hq-003w.jpg" alt="">
+      <img src="images/hq-004n.jpg" alt="">
+    </div>
+    <div class="slick5">
+      <img src="images/hq-001w.jpg" alt="">
+      <img src="images/hq-001n.jpg" alt="">
+      <img src="images/hq-002g.jpg" alt="">
+      <img src="images/hq-003w.jpg" alt="">
+      <img src="images/hq-004n.jpg" alt="">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js "></script>
+    <script>
+     $(document).ready(function(){
+       $('.slick1').slick();
+       $('.slick2').slick({
+         infinite: true,
+         slidesToShow: 3,
+         slidesToScroll: 3
+       });
+       $('.slick3').slick({
+         dots: true,
+         infinite: true,
+         speed: 300,
+         slidesToShow: 2,
+         centerMode: true,
+         variableWidth: true
+       });
+       $('.slick4').slick({
+         centerMode: true,
+         centerPadding: '60px',
+         slidesToShow: 3,
+         responsive: [
+           {
+             breakpoint: 768,
+             settings: {
+               arrows: false,
+               centerMode: true,
+               centerPadding: '40px',
+               slidesToShow: 3
+             }
+           },
+           {
+             breakpoint: 480,
+             settings: {
+               arrows: false,
+               centerMode: true,
+               centerPadding: '40px',
+               slidesToShow: 1
+             }
+           }
+         ]
+       });
+       $('.slick5').slick({
+         dots: true,
+         infinite: true,
+         speed: 500,
+         fade: true,
+         cssEase: 'linear'
+       });
+     });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UIでカレンダー(日付範囲)</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/black-tie/jquery-ui.css">
+  <style>
+  body {
+    width: 940px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  </style>
+</head>
+<body>
+  <h1>datepickerのテスト(double form period)</h1>
+  <p>--説明--</p>
+  <p>1. <b>[始まり]</b>も<b>[終わり]</b>も、明日以降の値は取らない</p>
+  <p>2. <b>[終わり]</b>は、<b>[始まり]</b>で選択した日付より前を取らない</p>
+  <p>3. <b>[始まり]</b>は、<b>[終わり]</b>で選択した日付以降を取らない</p>
+  <input type="text" id="datepicker-from" readonly>[始まり]
+  <br>
+  <br>
+  <input type="text" id="datepicker-to" readonly>[終わり]
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  <script>
+  $(function() {
+    // 例: 2015/1/1  17:30:11
+    // var date = new Date( jQuery.now() ).toLocaleString();
+    // 現在の時刻を生成
+    var date  = new Date();
+    var ymd = date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate();
+
+    // from datepicker
+    $('#datepicker-from').datepicker({
+      showCurrentAtPos: 1,
+      numberOfMonths: 3,
+      stepMonths: 3,
+      dateformat: 'yyyy/mm/dd',
+      minDate: -365,
+      // maxDateの指定は、toの値によって制限する
+      // toが空の場合は今日の日付のみ選択
+      beforeShow:function(){
+        if ($('#datepicker-to').val() == '') {
+          $(this).datepicker('option', 'maxDate', ymd);
+        } else {
+          $(this).datepicker('option', 'maxDate', $('#datepicker-to').val());
+        }
+      }
+    });
+
+    // to datepicker
+    $('#datepicker-to').datepicker({
+      showCurrentAtPos: 1,
+      numberOfMonths: 3,
+      stepMonths: 3,
+      dateformat: 'yyyy/mm/dd',
+      maxDate: ymd,
+      // minDateの指定は、fromの値によって制限する
+      // fromが空の場合は今日の日付のみ選択
+      beforeShow:function(){
+        if ($('#datepicker-from').val() == '') {
+          $(this).datepicker('option', 'minDate', ymd);
+        } else {
+          $(this).datepicker('option', 'minDate', $('#datepicker-from').val());
+        }
+      }
+    });
+  });
+  </script>
+</body>
+</html>

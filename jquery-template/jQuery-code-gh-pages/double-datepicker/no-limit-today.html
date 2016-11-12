@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UIでカレンダー(日付範囲)</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/black-tie/jquery-ui.css">
+  <style>
+  body {
+    width: 940px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  </style>
+</head>
+<body>
+  <h1>datepickerのテスト(double form period)</h1>
+  <p>--説明--</p>
+  <p>1. <b>[終わり]</b>は、<b>[始まり]</b>で選択した日付より前を取らない</p>
+  <p>2. <b>[始まり]</b>は、<b>[終わり]</b>で選択した日付以降を取らない</p>
+  <input type="text" id="datepicker-from" readonly>[始まり]
+  <br>
+  <br>
+  <input type="text" id="datepicker-to" readonly>[終わり]
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+  <script>
+  $(function() {
+    // from datepicker
+    $('#datepicker-from').datepicker({
+      showCurrentAtPos: 1,
+      numberOfMonths: 3,
+      stepMonths: 3,
+      dateformat: 'yy/mm/dd',
+      // maxDateの指定は、toの値によって制限する
+      beforeShow:function(){
+        $(this).datepicker('option', 'maxDate', $('#datepicker-to').val());
+      }
+    });
+
+    // to datepicker
+    $('#datepicker-to').datepicker({
+      showCurrentAtPos: 1,
+      numberOfMonths: 3,
+      stepMonths: 3,
+      dateformat: 'yy/mm/dd',
+      // minDateの指定は、fromの値によって制限する
+      beforeShow:function(){
+        $(this).datepicker('option', 'minDate', $('#datepicker-from').val());
+      }
+    });
+  });
+  </script>
+</body>
+</html>

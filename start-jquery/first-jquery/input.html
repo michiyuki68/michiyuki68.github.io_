@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>input test</title>
+</head>
+<body>
+
+  <a href="javascript:void(0)" title="削除" onClick="return selectAction( 'hello' );" >test link</a><br><br>
+
+  <input type="text" value="" name="action">
+  
+  <script>
+  function selectAction( action ){
+    $( 'input[name="action"]' ).val( action );
+  }
+  </script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</body>
+</html>
