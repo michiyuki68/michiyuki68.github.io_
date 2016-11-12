@@ -47,7 +47,7 @@
 					<a class="grid__item" href="#">
 						<h2 class="title title--preview">日印、原子力協定に署名、首脳会談、ＮＰＴ非加盟国、核実験に歯止め策。</h2>
 						<div class="loader"></div>
-						<span class="category">Stories for humans</span>
+						<span class="category">一面</span>
 						<div class="meta meta--preview">
 							<img class="meta__avatar" src="img/authors/1.png" alt="author01" /> 
 							<span class="meta__date"><i class="fa fa-calendar-o"></i> 9 Apr</span>
@@ -57,7 +57,7 @@
 					<a class="grid__item" href="#">
 						<h2 class="title title--preview">パート主婦、年収１５０万円まで控除、財務省検討、「１０３万円の壁」見直し。</h2>
 						<div class="loader"></div>
-						<span class="category">Love &amp; Hate</span>
+						<span class="category">一面</span>
 						<div class="meta meta--preview">
 							<img class="meta__avatar" src="img/authors/2.jpg" alt="author02" /> 
 							<span class="meta__date"><i class="fa fa-calendar-o"></i> 7 Apr</span>
