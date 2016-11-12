@@ -194,8 +194,8 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transition: opacity 0s;
-  transition: opacity 0s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .view-single .grid::after {
@@ -374,8 +374,8 @@ button:focus {
 }
 
 .grid__item--loading .loader::before {
-  -webkit-transition: -webkit-transform 0s;
-  transition: transform 0s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   -webkit-transform: scale3d(1, 1, 1);
@@ -395,21 +395,21 @@ button:focus {
 .title--preview,
 .loader,
 .category {
-  -webkit-transition: -webkit-transform 0s, opacity 0s;
-  transition: transform 0s, opacity 0s;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 /* closing (delays) */
 .title--preview {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
 }
 
 .loader {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 
 .grid__item .category {
@@ -427,16 +427,16 @@ button:focus {
 }
 
 .grid__item--animate .loader {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
   opacity: 0;
   -webkit-transform: translate3d(0, -30px, 0);
   transform: translate3d(0, -30px, 0);
 }
 
 .grid__item--animate .category {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
   opacity: 0;
   -webkit-transform: translate3d(0, -40px, 0);
   transform: translate3d(0, -40px, 0);
@@ -522,25 +522,25 @@ button:focus {
 .meta--preview .meta__avatar,
 .meta--preview .meta__date,
 .meta--preview .meta__reading-time {
-  -webkit-transition: -webkit-transform 0s, opacity 0s;
-  transition: transform 0s, opacity 0s;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
   -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .grid__item--loading .meta__avatar {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 
 .grid__item--loading .meta__date {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0.17s;
+  transition-delay: 0.17s;
 }
 
 .grid__item--loading .meta__reading-time {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0.24s;
+  transition-delay: 0.24s;
 }
 
 .grid__item--loading .meta__avatar,
@@ -578,15 +578,15 @@ button:focus {
 }
 
 .placeholder.placeholder--trans-in {
-  -webkit-transition: -webkit-transform 0s;
-  transition: transform 0s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .placeholder.placeholder--trans-out {
-  -webkit-transition: -webkit-transform 0s;
-  transition: transform 0s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
 }
 
 /* main content */
@@ -647,8 +647,8 @@ button:focus {
   min-height: 100vh;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: opacity 0s;
-  transition: opacity 0s;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
 }
 
 /* content elements */
@@ -726,8 +726,8 @@ button:focus {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform 0s, opacity 0s;
-  transition: transform 0s, opacity 0s;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
   -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
@@ -739,29 +739,29 @@ button:focus {
 }
 
 .content__item--show .title--full {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
 }
 
 .content__item--show .meta--full .meta__avatar {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .content__item--show .meta--full .meta__date {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0.27s;
+  transition-delay: 0.27s;
 }
 
 .content__item--show .meta--full .meta__reading-time {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-delay: 0.34s;
+  transition-delay: 0.34s;
 }
 
 .content__item--show.content__item p {
   opacity: 1;
-  -webkit-transition: opacity 0s 0s;
-  transition: opacity 0s 0s;
+  -webkit-transition: opacity 0.5s 0.25s;
+  transition: opacity 0.5s 0.25s;
 }
 
 /* close button (for content and sidebar) */
@@ -785,8 +785,8 @@ button:focus {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: opacity 0s;
-  transition: opacity 0s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .close-button span {
@@ -882,8 +882,8 @@ button:focus {
     bottom: 5px;
     left: 5px;
     border: 1px solid rgba(74, 74, 74, 0.075);
-    -webkit-transition: opacity 0s;
-    transition: opacity 0s;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
   }
 
   .grid__item:hover::before,
@@ -924,8 +924,8 @@ button:focus {
   .sidebar {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
-    -webkit-transition: -webkit-transform 0s;
-    transition: -webkit-transform 0s;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
   }
 
   .sidebar.sidebar--open {
