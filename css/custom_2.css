@@ -172,6 +172,10 @@
 	color: #ef4f69;
 }
 
+.custom-content-reveal time{
+	display: none;
+}
+
 .custom-content-reveal a:hover {
 	color: #333;
 }
@@ -201,6 +205,7 @@
 
 .fc-calendar .fc-row > div:empty {
 	background: transparent;
+	cursor: default;
 }
 
 .fc-calendar .fc-row > div > span.fc-date {
@@ -211,6 +216,10 @@
 	color: #686a6e;
 	font-weight: 400;
 	pointer-events: none;
+}
+
+.fc-calendar .fc-row > div > span.fc-emptydate {
+	color: #ccc;
 }
 
 .fc-calendar .fc-row > div.fc-today {
