@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>File ì«Ç›çûÇ›ÉeÉXÉg</title>
+</head>
+<body>
+<pre id="preview" ></pre>
+<input type="file" id="getfile" accept="text/*">
+<script>
+var file = document.querySelector('#getfile');
+
+file.onchange = function (){
+  var fileList = file.files;
+  //ì«Ç›çûÇ›
+  var reader = new FileReader();
+  reader.readAsText(fileList[0]);
+
+  //ì«Ç›çûÇ›å„
+  reader.onload = function  () {
+    document.querySelector('#preview').textContent = reader.result;
+  };
+};
+</script> 
+</body>
+</html>
