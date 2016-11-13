@@ -66,10 +66,9 @@
 				<section class="content">
 					<div class="scroll-wrap">
 						<article class="content__item">
-							<span class="category category--full">Stories for humans</span>
-							<h2 class="title title--full">日印、原子力協定に署名、首脳会談、ＮＰＴ非加盟国、核実験に歯止め策。</h2>
-							<div class="meta meta--full">
-								<img class="meta__avatar" src="../buhin/img/authors/1.png" alt="author01" />
+							<span class="category category--full">カテゴリー</span>
+							<h2 class="title title--full">上場企業、２年ぶり増益、今期最終で７％、商社・建設などけん引、下期業績なお不透明。</h2>
+								<img class="meta__avatar" src="../../buhin/img/authors/1.png" alt="author01" />
 								<span class="meta__author">Matthew Walters</span>
 								<span class="meta__date"><i class="fa fa-calendar-o"></i> 9 Apr</span>
 								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span>
