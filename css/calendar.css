@@ -61,7 +61,7 @@
 	width:  14.28%; /* 100% / 7 */
 	width: -moz-calc(100%/7);
 	width: -webkit-calc(100%/7);
-	/* width: calc(100%/7); */ 
+	width: calc(100%/7);
 	position: relative;
 }
 
@@ -96,7 +96,7 @@
 	text-align: right;
 }
 
-.fc-calendar .fc-row > div time {
+.fc-calendar .fc-row > div time, .fc-calendar .fc-row > div note {
 	display: none;
 }
 
