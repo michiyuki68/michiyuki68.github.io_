@@ -929,7 +929,7 @@ button:focus {
     border: 3px solid rgba(129, 196, 131, 0.5);
   }
 
-  .grid__item:hover .mask {
+  .grid__item:hover .mask :after {
     border: 3px solid rgba(129, 196, 131, 0.5);
 	opacity:		1;	/* マスクを表示する */
 	-webkit-transform:	scale(2);	/* 2倍に拡大 */
