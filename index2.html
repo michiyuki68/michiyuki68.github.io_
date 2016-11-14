@@ -75,8 +75,8 @@
 				$('#calendar').on('shown.calendar.calendario', function(){
 					$('div.fc-row > div').on('onDayClick.calendario', function(e, dateprop) {
 						console.log(dateprop);
-
-window.location.href = 'http://michiyuki68.github.io/' + dateprop.year + dateprop.month + dateprop.day;
+//対応する記事を表示
+window.location.href = 'https://michiyuki68.github.io/' + dateprop.year + dateprop.month + dateprop.day;
 
 						if(dateprop.data) {
 							showEvents(dateprop.data.html, dateprop);
