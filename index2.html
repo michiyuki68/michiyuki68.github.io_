@@ -76,6 +76,9 @@
 					$('div.fc-row > div').on('onDayClick.calendario', function(e, dateprop) {
 						console.log(dateprop);
 
+window.alert(dateprop.year + dateprop.month + dateprop.day);
+window.location.href = 'http://michiyuki68.github.io/' + dateprop.year + dateprop.month + dateprop.day;
+
 						if(dateprop.data) {
 							showEvents(dateprop.data.html, dateprop);
 						}
@@ -94,8 +97,6 @@
 
                 function showEvents( contentEl, dateprop ) {
                     hideEvents();
-window.alert(dateprop.year + dateprop.month + dateprop.day);
-window.location.href = 'http://michiyuki68.github.io/' + dateprop.year + dateprop.month + dateprop.day;
                     var $events = $( '<div id="custom-content-reveal" class="custom-content-reveal"><h4>Events for ' + dateprop.monthname + ' '
 					+ dateprop.day + ', ' + dateprop.year + '</h4></div>' ),
                     $close = $( '<span class="custom-content-close"></span>' ).on( 'click', hideEvents);
