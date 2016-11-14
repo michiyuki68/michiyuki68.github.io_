@@ -72,7 +72,7 @@ button:focus {
 .sidebar h1 {
   margin: 0.75em 0 0;
   font-size: 2em;
-  line-height: 0.5;
+  line-height: 1;
   font-family: "Playfair Display", serif;
 }
 
