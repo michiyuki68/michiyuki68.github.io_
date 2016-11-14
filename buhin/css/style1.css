@@ -913,8 +913,8 @@ button:focus {
 	padding-top:		80px;
 }
 .grid__item .mask {
-	width:			100%;
-	height:			100%;
+	width:			280px;
+	height:			188px;
 	position:		absolute;
 	top:			0;
 	left:			0;
@@ -927,14 +927,11 @@ button:focus {
   .grid__item:hover::before,
   .grid__item:focus::before {
     border: 3px solid rgba(129, 196, 131, 0.5);
-  }
-
-  .grid__item:hover .mask ::before {
-    border: 3px solid rgba(129, 196, 131, 0.5);
 	opacity:		1;	/* ƒ}ƒXƒN‚ð•\Ž¦‚·‚é */
 	-webkit-transform:	scale(2);	/* 2”{‚ÉŠg‘å */
 	transform:		scale(2);
   }
+
 
   .grid__item--loading.grid__item::before {
     opacity: 0;
