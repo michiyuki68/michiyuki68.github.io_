@@ -152,14 +152,29 @@ button:focus {
   color: #aaa;
 }
 
-.related {
-  font-size: 0.85em;
-  padding-bottom: 1em;
+
+.sideCtgr {
+  margin: 2em 0 0;
+  font-size: 1.5em;
 }
 
-.related h3 {
-  margin: 3em 0 0.5em 0;
-  font-size: 0.95em;
+.sideCtgr a {
+  display: block;
+  margin: 0 0.5em;
+}
+
+.sideCtgr a.current-demo {
+  color: #333;
+  font-weight: bold;
+}
+
+.sideCtgr a.current-demo:focus {
+  color: #aaa;
+}
+
+.related {
+  font-size: 1.5em;
+  padding-bottom: 1em;
 }
 
 .related a {
