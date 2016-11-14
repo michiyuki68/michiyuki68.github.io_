@@ -44,7 +44,10 @@ For Each objFile In objFolder.Files
   SendLog "次のファイルの処理を開始：" & objFile.Name
 '     WScript.Echo objFile.Path
 
-  ReplaceRegPattern objFile.Path, "Body" & vbCrLf & "([^。]*。)", "Body" & vbCrLf & "$1" & vbCrLf
+  ReplaceRegPattern objFile.Path, "<h2 class=""title"">|</h2>|<div class=""col col10 artCSS_Highlight_on""><p>|</p><!--/.col-->", ""
+
+  ReplaceRegPattern objFile.Path, "<br>", vbCrLf
+
 Next
 
 
