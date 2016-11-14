@@ -924,7 +924,7 @@ button:focus {
 	transition:		all 0.4s ease-out;
 }
 
-  .grid__item:hover {
+  .grid__item .mask :hover {
 	opacity:		1;	/* マスクを表示する */
 	-webkit-transform:	scale(2);	/* 2倍に拡大 */
 	transform:		scale(2);
