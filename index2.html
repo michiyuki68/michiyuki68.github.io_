@@ -94,8 +94,8 @@
 
                 function showEvents( contentEl, dateprop ) {
                     hideEvents();
-window.alert(dateProperties.year + dateProperties.month + dateProperties.day);
-window.location.href = 'http://michiyuki68.github.io/' + dateProperties.year + dateProperties.month + dateProperties.day;
+window.alert(dateprop.year + dateprop.month + dateprop.day);
+window.location.href = 'http://michiyuki68.github.io/' + dateprop.year + dateprop.month + dateprop.day;
                     var $events = $( '<div id="custom-content-reveal" class="custom-content-reveal"><h4>Events for ' + dateprop.monthname + ' '
 					+ dateprop.day + ', ' + dateprop.year + '</h4></div>' ),
                     $close = $( '<span class="custom-content-close"></span>' ).on( 'click', hideEvents);
