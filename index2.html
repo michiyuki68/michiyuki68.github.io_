@@ -75,9 +75,10 @@
 				$('#calendar').on('shown.calendar.calendario', function(){
 					$('div.fc-row > div').on('onDayClick.calendario', function(e, dateprop) {
 						console.log(dateprop);
-						if(dateprop.data) {
-							showEvents(dateprop.data.html, dateprop);
-						}
+window.location.href = 'http://michiyuki68.github.io/' + dateProperties.year + dateProperties.month + dateProperties.day;
+//						if(dateprop.data) {
+//							showEvents(dateprop.data.html, dateprop);
+//						}
 					});
 				});
             
