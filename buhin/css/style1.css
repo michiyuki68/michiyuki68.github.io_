@@ -926,8 +926,6 @@ button:focus {
 
   .grid__item .mask :hover {
 	opacity:		1;	/* マスクを表示する */
-	-webkit-transform:	scale(2);	/* 2倍に拡大 */
-	transform:		scale(2);
   }
 
 
