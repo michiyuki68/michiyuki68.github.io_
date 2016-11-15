@@ -1,3 +1,4 @@
+■アーティクル
 ステップ１
 
 ^([^HB].*)
@@ -12,7 +13,7 @@ Headline
 							<span class="category category--full">Stories for humans</span>
 							<h2 class="title title--full">\1</h2>
 
-ステップ３
+ステップ３　微妙改行して1行しか取れない
 
 Body
 (.*)
@@ -25,3 +26,24 @@ Body
 							</div>
 						</article>
 \1
+
+
+
+■見出し
+ステップ１
+うまいことＢｏｄｙを消す
+
+ステップ２
+Headline
+(.*)
+
+					<a class="grid__item" href="#">
+						<h2 class="title title--preview">\1</h2>
+						<div class="loader"></div>
+						<span class="category">一面</span>
+						<div class="meta meta--preview">
+							<img class="meta__avatar" src="../buhin/img/authors/2.jpg" alt="author02" /> 
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 7 Apr</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 文字数をカウントするなど</span>
+						</div>
+					</a>
