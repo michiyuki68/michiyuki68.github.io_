@@ -1,21 +1,23 @@
-<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN" 
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <title>サンプル：JSON形式のファイルの取得</title>
-    <script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAUiSm4yE-UDgb8kviBG-3fxTET7FL1OGiEo0132Tsz7xytqsKmxTD2VNE7QBz0JNWWmZzj89DQ44VNA&sensor=false"
-            type="text/javascript" charset="utf-8"></script>
-    <script src="./js/info.js" type="text/javascript"></script>
-  </head>
-  <body onload="initialize()" onunload="GUnload()">
-    <div id="map_canvas" style="width: 400px; height: 400px"></div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>
+$(function() {
+  $.getJSON("data.json" , function(data) {
+    var
+      ulObj = $("#demo"),
+      len = data.length;
 
-    <form>
-    <p>
-    <input type="button" id="btn" value="ダウンロード" onclick="downloadData()" />
-    </p>
-    </form>
-
-  </body>
+    for(var i = 0; i < len; i++) {
+      ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].name));
+    }
+  });
+});
+</script>
+</head>
+<body>
+<ul id="demo"></ul>
+</body>
 </html>
