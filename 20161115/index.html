@@ -24,7 +24,7 @@ $(function() {
 
     for(var i = 0; i < len; i++) {
       ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].HeadLine));
-      ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].BodyText));
+      ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].FirstBody));
     }
   });
 });
@@ -73,8 +73,8 @@ document.write("このページの更新日時は、" + document.lastModified +"
 						</div>
 					</header>
 					<a class="grid__item" href="#">
-	<p id="headlines"></p>
-						<h2 class="title title--preview">トランプ新政権、まず安定重視、側近人事で党配慮、過激公約は微修正。</h2>
+
+						<h2 class="title title--preview"><p id="headlines"></p></h2>
 						<div class="loader"></div>
 						<span class="category">一面</span>
 						<div class="meta meta--preview">
