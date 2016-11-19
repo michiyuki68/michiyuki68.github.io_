@@ -19,12 +19,12 @@
 $(function() {
   $.getJSON("data.json" , function(data) {
     var
-      ulObj = $("#demo"),
+      ulObj = $("#headlines"),
       len = data.length;
 
     for(var i = 0; i < len; i++) {
-      ulObj.append($("<li>").attr({"id":data[i].seqNo}).text(data[i].HeadLine));
-      ulObj.append($("<li>").attr({"id":data[i].seqNo}).text(data[i].BodyText));
+      ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].HeadLine));
+      ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].BodyText));
     }
   });
 });
@@ -43,7 +43,7 @@ $(function() {
 <SCRIPT language="JavaScript">
 document.write("このページの更新日時は、" + document.lastModified +"です。")
 </SCRIPT>
-	<ul id="demo"></ul>
+
 				<h1><span>Nikkei Telecom21 Viewer</h1>
 				<nav class="codrops-demos">
 					<a class="current-demo" href="index.html">朝刊</a>
@@ -73,6 +73,7 @@ document.write("このページの更新日時は、" + document.lastModified +"
 						</div>
 					</header>
 					<a class="grid__item" href="#">
+	<p id="headlines"></p>
 						<h2 class="title title--preview">トランプ新政権、まず安定重視、側近人事で党配慮、過激公約は微修正。</h2>
 						<div class="loader"></div>
 						<span class="category">一面</span>
