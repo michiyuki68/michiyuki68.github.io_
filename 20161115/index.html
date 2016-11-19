@@ -13,8 +13,27 @@
 		<link rel="stylesheet" type="text/css" href="../buhin/fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="../buhin/css/style1.css" />
 		<script src="../buhin/js/modernizr.custom.js"></script>
+<script>
+$(function() {
+  $.getJSON("data.json" , function(data) {
+    var
+      ulObj = $("#demo"),
+      len = data.length;
+
+    for(var i = 0; i < len; i++) {
+      ulObj.append($("<li>").attr({"id":data[i].seqNo}).text(data[i].HeadLine));
+      ulObj.append($("<li>").attr({"id":data[i].seqNo}).text(data[i].BodyText));
+    }
+  });
+});
+</script>
 	</head>
 	<body>
+<SCRIPT language="JavaScript">
+document.write("このページの更新日時は、" + document.lastModified +"です。")
+</SCRIPT>
+	<ul id="demo"></ul>
+
 		<div class="container">
 			<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
 			<div id="theSidebar" class="sidebar">
