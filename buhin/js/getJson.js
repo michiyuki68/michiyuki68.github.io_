@@ -10,7 +10,6 @@ $(function() {
 
 $('<h2 class="title title--preview">' + ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].HeadLine)) + '</p></h2>';
 
-
   });
 });
 45tr
