@@ -17,7 +17,7 @@ $(function() {
 //	$('</div>');
 //	$('<h2 class="title title--preview">' + ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].HeadLine)) + '<div class="loader"></div>' + '<span class="category">' + ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].category)) + '</span>' + '<div class="meta meta--preview">' + '<img class="meta__avatar" src="' + ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].img)) + '" alt="author02" />' + '<span class="meta__date"><i class="fa fa-calendar-o"></i>' + ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].date)) + '</span>' + '<span class="meta__reading-time"><i class="fa fa-clock-o"></i>' + ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].kijiLength)) + '</span>' + '</div>');
 
-	$('<h2 class="title title--preview">' + ulObj.append($("<div>").attr({"id":data[i].seqNo}).text(data[i].HeadLine)) + '<div class="loader"></div>' + '<span class="category">' + ulObj.append($("<div>").attr({"id":data[i].seqNo}).text(data[i].category)) + '</span>');
+	$(ulObj.append('<h2 class="title title--preview">' + data[i].HeadLine + '<div class="loader"></div>' + '<span class="category">' + data[i].category + '</span>');
 
 
 
