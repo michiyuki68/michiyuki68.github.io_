@@ -23,8 +23,9 @@ $(function() {
       len = data.length;
 
     for(var i = 0; i < 1; i++) {
+//    for(var i = 0; i < len; i++) {
       ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].HeadLine));
-      ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].FirstBody));
+//      ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].FirstBody));
     }
   });
 });
