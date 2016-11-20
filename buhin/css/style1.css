@@ -352,7 +352,7 @@ button:focus {
 }
 
 .loader {
-  height: 0.5px;
+  height: 1px;
   width: 40%;
   margin: 1em auto;
   position: relative;
