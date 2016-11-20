@@ -5,7 +5,7 @@ $(function() {
       len = data.length;
 
 //    for(var i = 0; i < len; i++) {
-i=0;
+var i=0;
       ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].HeadLine));
 //    }
 
