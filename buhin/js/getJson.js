@@ -8,7 +8,7 @@ $(function() {
     for(var i = 0; i < 1; i++) {
 //      ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].HeadLine));
 $('<h2 class="title title--preview">' + ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].HeadLine)) + '</p></h2>');
-	$('<div class="loader"></div>');
+	'<div class="loader"></div>';
 //	$('<span class="category">' + ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].category)) + '</span>');
 //	$('<div class="meta meta--preview">');
 //		$('<img class="meta__avatar" src=' + ulObj.append($("<p>").attr({"id":data[i].seqNo}).text(data[i].img)) + ' alt="author02" />');
