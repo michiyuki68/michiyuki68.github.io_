@@ -1,5 +1,5 @@
 $(function() {
-  $.getJSON("../../20161115/data.json" , function(data) {
+  $.getJSON("data.json" , function(data) {
     var
       ulObj = $("#demo"),
       len = data.length;
