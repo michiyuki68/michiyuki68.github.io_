@@ -816,6 +816,18 @@ you can use the generic selector below, but it's slower:
   .bootstrap-3__col-md-6 { width: 50%; }
 }
 
+/* aaaaaaaaaaaaa
+------------------------- */
+	 .element-item.hover:hover {
+	     width: 400px;
+	     background-color: #f33;
+	 }
+	 .element-item.click {
+	 }
+	 .element-item.click.clicked {
+	     width: 400px;
+	     background-color: #3f3;
+	 }
 
 /* container
 ------------------------- */

@@ -8,6 +8,14 @@
 		<title>Isotope</title>
 		<!-- Isotope does not require any CSS files -->
 		<link rel="stylesheet" href="css/isotope-docs.css?3" media="screen">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script>
+	 $(function() {
+	     $(".click").click(function() {
+		 $(this).toggleClass("clicked");
+	     });
+	 });
+	</script>
 	</head>
 	<body class="page--index">
 		<div class="nav">
@@ -59,7 +67,7 @@
 						</div>
 					</div>
 					<div class="grid">
-						<div class="element-item transition metal " data-category="transition">
+						<div class="element-item transition metal click" data-category="transition">
 							<h5 class="name">ＰＰ存続へ協調演出、参加国首脳会合、トランプ氏を警戒、首相、手続き推進呼びかけ。</h5>
 							<p class="symbol">Ｔ</p>
 							<p class="number">80</p>
@@ -176,7 +184,6 @@
 		</div>
 		<!-- Looking for isotope.js? Use isotope.pkgd.min.js -->
 		<!-- Isotope does NOT require jQuery. But it does make things easier -->
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 		<script src="js/isotope-docs.min.js?3"></script>
 	</body>
