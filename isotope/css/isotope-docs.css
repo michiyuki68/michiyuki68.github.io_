@@ -825,9 +825,14 @@ you can use the generic selector below, but it's slower:
 	 .element-item.click {
 	 }
 	 .element-item.click.clicked {
-	     width: 400px;
+	     width: 45%;
 	     background-color: #3f3;
 	 }
+$grid-item.isotope({
+  // options
+  itemSelector: '.element-item',
+  layoutMode: 'packery'
+});
 
 /* container
 ------------------------- */
