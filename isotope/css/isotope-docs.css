@@ -831,7 +831,11 @@ you can use the generic selector below, but it's slower:
 $grid-item.isotope({
   // options
   itemSelector: '.element-item',
+<<<<<<< HEAD
   layoutMode: 'fitRows'
+=======
+  layoutMode: 'packery'
+>>>>>>> origin/master
 });
 
 /* container
