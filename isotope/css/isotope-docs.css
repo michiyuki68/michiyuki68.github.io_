@@ -818,6 +818,7 @@ two columns for large devices
 /* aaaaaaaaaaaaa
 ------------------------- */
 	 .element-item.hover:hover {
+
 	     width: 400px;
 	     background-color: #f33;
 	 }
@@ -826,7 +827,9 @@ two columns for large devices
 	 .element-item.click.clicked {
 	     width: 98%;
 	     height: 400px;
-	     background-color: #3f3;
+	     background-color: #f0ffff;
+
+    border: 3px solid rgba(99, 99, 35, 0.5);
 	 }
 
 
@@ -1413,10 +1416,19 @@ you can use the generic selector below, but it's slower:
 /* element-item
 ------------------------- */
 
+/* 「…」を表示
+ http://monopocket.jp/blog/css/2866/ */
+p.overflow {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .element-item {
   position: relative;
   float: left;
-  width: 100px;
+  width: 200px;
   height: 100px;
   margin: 5px;
   padding: 10px;
@@ -1444,9 +1456,9 @@ you can use the generic selector below, but it's slower:
   position: absolute;
   left: 10px;
   top: 0px;
-  font-size: 2.8em;
-  font-weight: bold;
-  color: white;
+  font-size: 1.0em;
+/*  font-weight: bold;*/
+  color: black;
 }
 
 .element-item .number {
