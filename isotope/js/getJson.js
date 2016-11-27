@@ -2,7 +2,7 @@ $(function() {
   $.getJSON("data.json" , function(data) {
     var
       ulObj = $("#demo"),
-      appObj= ulObj.append($("<div>"),
+      appObj= ulObj.append($("<p>"),
       len = data.length;
 
     for(var i = 0; i < len; i++) {
