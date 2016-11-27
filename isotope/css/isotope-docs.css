@@ -831,6 +831,8 @@ two columns for large devices
 
     border: 3px solid rgba(99, 99, 35, 0.5);
 
+  overflow: scroll;
+
 	 }
 
 /* site-footer
