@@ -11,9 +11,6 @@ divtext = """<div class=""element-item transition metal click"" data-category=""
 yousotext = """<p class=""articleSubCategory"">data[i].category</p><p class=""headline"">data[i].HeadLine</p><p class=""firstArticle overflow"">data[i].FirstBody</p>""";
 
 
-window.alert( divtext ) ;
-window.alert( yousotext ) ;
-
 ulObj.wrap(divtext).text(yousotext);
 
     }
