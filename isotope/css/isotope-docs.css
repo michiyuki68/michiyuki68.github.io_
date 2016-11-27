@@ -815,7 +815,7 @@ two columns for large devices
   clear: both;
 }
 
-/* aaaaaaaaaaaaa
+/* aaa
 ------------------------- */
 	 .element-item.hover:hover {
 
@@ -1011,6 +1011,10 @@ a:hover code {
     font-size: 15px;
   }
 
+/*aaaaaaaa*/
+.element-item {
+  width: 100px;
+  height: 100px;
 }
 
 /* Code
