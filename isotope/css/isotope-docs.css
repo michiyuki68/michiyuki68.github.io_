@@ -895,7 +895,7 @@ html.export {
 
 body {
 /*  color: #7b7b7b
-  color: #EEE;
+  color: #EEE
   background: #262524;*/
 }
 
@@ -1430,12 +1430,12 @@ p.overflow {
 .element-item {
   position: relative;
   float: left;
-  width: 200px;
+  width: 300px;
   height: 100px;
   margin: 5px;
   padding: 10px;
   background: #888;
-  color: #262524
+  /*color: #262524*/
 }
 
 .element-item > * {
@@ -1459,8 +1459,8 @@ p.overflow {
   left: 10px;
   top: 0px;
   font-size: 1.0em;
-/*  font-weight: bold;*/
-  color: black;
+/*  font-weight: bold;
+  color: black;*/
 }
 
 .element-item .number {
@@ -1918,7 +1918,7 @@ p.overflow {
 
 
 .hero__title {
-  font-size: 4.6rem;
+  font-size: 2.6rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
   margin-bottom: 0.1em;
@@ -1969,9 +1969,9 @@ p.overflow {
 
 @media screen and ( min-width: 960px ) {
 
-  .hero__title {
+/*  .hero__title {
     font-size: 7.0rem;
-  }
+  }/*
 
   .hero__tagline {
     font-size: 2.1rem;
