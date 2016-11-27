@@ -1508,6 +1508,15 @@ p.overflow {
   font-size: 0.8em;
   font-weight: normal;
 }
+.element-item .mainArticle {
+  position: absolute;
+  left: 10px;
+  top: 200px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.8em;
+  font-weight: normal;
+}
 
 .element-item.alkali          { background: #F00; background: hsl(   0, 100%, 50%); }
 .element-item.alkaline-earth  { background: #F80; background: hsl(  36, 100%, 50%); }
