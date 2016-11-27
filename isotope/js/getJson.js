@@ -6,13 +6,11 @@ $(function() {
       appObj= $("<p>"),
       len = data.length;
 
-var divtext = """<div class=""element-item transition metal click"" data-category=""transition"">"""
+var divtext = """<div class=""element-item transition metal click"" data-category=""transition"">""";
 
 //    for(var i = 0; i < len; i++) {
 
     for(var i = 0; i < 1; i++) {
-
-
 
         ulObj.append($("<p>").attr("class", "articleCategory").text(data[i].category));
         ulObj.append($("<p>").attr("class", "headline").text(data[i].HeadLine));
