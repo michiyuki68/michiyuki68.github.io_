@@ -1011,10 +1011,6 @@ a:hover code {
     font-size: 15px;
   }
 
-/*aaaaaaaa*/
-.element-item {
-  width: 100px;
-  height: 100px;
 }
 
 /* Code
@@ -1422,7 +1418,7 @@ you can use the generic selector below, but it's slower:
 /* element-item
 ------------------------- */
 
-/* 「…」を表示
+/* 「…」を表示 aaa
  http://monopocket.jp/blog/css/2866/ */
 p.overflow {
   width: 200px;
@@ -1434,8 +1430,8 @@ p.overflow {
 .element-item {
   position: relative;
   float: left;
-  width: 300px;
-  height: 100px;
+  width: 250px;
+  height: 200px;
   margin: 5px;
   padding: 10px;
   background: #888;
@@ -2291,6 +2287,14 @@ p.overflow {
   }
   
 
+}
+
+@media screen and ( max-width: 500px ) {
+
+/*aaaaaaaa*/
+.element-item {
+  width: 40%;
+}
 }
 
 /* ui-group
