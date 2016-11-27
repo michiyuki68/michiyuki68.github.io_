@@ -6,7 +6,7 @@ $(function() {
       appObj= $("<p>"),
       len = data.length;
 
-var divtext = """<div class=""element-item transition metal click"" data-category=""transition"">""";
+//var divtext = """<div class=""element-item transition metal click"" data-category=""transition"">""";
 
 //    for(var i = 0; i < len; i++) {
 
