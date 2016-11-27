@@ -830,8 +830,8 @@ two columns for large devices
 	     background-color: #f0ffff;
 
     border: 3px solid rgba(99, 99, 35, 0.5);
-	 }
 
+	 }
 
 /* site-footer
 ------------------------- */
@@ -882,19 +882,21 @@ green #1FB
 
 /* font-size on html for rem*/
 html {
-  font-family: Texta, sans-serif;
+  font-family: "游ゴシック", Meiryo UI, sans-serif;
   font-size: 17px;
   line-height: 1.5;
+  color: #7b7b7b
 }
 
 html.export {
-  font-family: sans-serif;
+  font-family: "游ゴシック", Meiryo UI, sans-serif;
   font-size: 15px;
 }
 
 body {
+/*  color: #7b7b7b
   color: #EEE;
-  background: #262524;
+  background: #262524;*/
 }
 
 /* ---- links ---- */
@@ -1433,7 +1435,7 @@ p.overflow {
   margin: 5px;
   padding: 10px;
   background: #888;
-  color: #262524;
+  color: #262524
 }
 
 .element-item > * {
