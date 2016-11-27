@@ -1436,6 +1436,8 @@ p.overflow {
   padding: 10px;
   background: #888;
   /*color: #262524*/
+
+    border: 3px solid rgba(99, 99, 35, 0.5);
 }
 
 .element-item > * {
@@ -1443,7 +1445,7 @@ p.overflow {
   padding: 0;
 }
 
-.element-item .name {
+/*/.element-item .name {
   position: absolute;
 
   left: 10px;
@@ -1459,8 +1461,8 @@ p.overflow {
   left: 10px;
   top: 0px;
   font-size: 1.0em;
-/*  font-weight: bold;
-  color: black;*/
+  font-weight: bold;
+  color: black;
 }
 
 .element-item .number {
@@ -1474,6 +1476,37 @@ p.overflow {
   left: 10px;
   top: 76px;
   font-size: 0.8em;
+}*/
+
+/*aaa*/
+.element-item .articleCategory {
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  font-size: 0.8em;
+}
+.element-item .articleSubCategory {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  font-size: 0.8em;
+}
+.element-item .headline {
+  position: absolute;
+  left: 10px;
+  top: 25px;
+  font-size: 1.0em;
+/*  font-weight: bold;
+  color: black;*/
+}
+.element-item .firstArticle {
+  position: absolute;
+  left: 10px;
+  top: 80px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.8em;
+  font-weight: normal;
 }
 
 .element-item.alkali          { background: #F00; background: hsl(   0, 100%, 50%); }
