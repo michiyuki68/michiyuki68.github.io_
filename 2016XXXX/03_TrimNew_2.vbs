@@ -46,7 +46,9 @@ For Each objFile In objFolder.Files
 
   ReplaceRegPattern objFile.Path, "<h2 class=""title"">|</h2>|<div class=""col col10 artCSS_Highlight_on""><p>|</p><!--/.col-->", ""
 
-  ReplaceRegPattern objFile.Path, "<br>", vbCrLf
+'  ReplaceRegPattern objFile.Path, "<br>", vbCrLf
+  ReplaceRegPattern objFile.Path, "<br>", ""
+
 
 Next
 
