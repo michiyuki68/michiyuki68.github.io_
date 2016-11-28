@@ -14,6 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="../buhin/css/style1.css" />
 		<script src="../buhin/js/modernizr.custom.js"></script>
 
+    <link rel="stylesheet" href="../buhin/css/isotope-docs.css?3" media="screen">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="../buhin/js/getJson.js"></script>
 	</head>
@@ -58,6 +59,16 @@ document.write("このページの更新日時は、" + document.lastModified +"
 							<span>Filter by:</span>
 							<span class="dropdown">Popular</span>
 						</div>
+<div class="big-demo" data-js="hero-demo">
+          <div class="ui-group">
+            <h3 class="ui-group__title">Filter</h3>
+            <div class="filters button-group js-radio-button-group">
+              <button class="button is-checked" data-filter="*">show all</button>
+              <button class="button" data-filter=".metal">metal</button>
+              <button class="button" data-filter=".transition">transition</button>
+              <button class="button" data-filter="ium">&#x2013;ium</button>
+            </div>
+          </div></div>
 					</header>
 <!--					<a class="grid__item" href="#">-->
 <a id="headlines"></a>
@@ -73,21 +84,20 @@ document.write("このページの更新日時は、" + document.lastModified +"
 						</div>-->
 
 <!--					</a>-->
-					<a class="grid__item" href="#">
+					<a class="grid__item transition" href="#" data-category="transition">
 						<h2 class="title title--preview">永住権、最短１年滞在で、海外経営者・技術者、優遇策を拡大。</h2>
-<!--						<div class="loader"></div>
+						<div class="loader"></div>
 						<span class="category">一面</span>
 						<div class="meta meta--preview">
-							<img class="meta__avatar" src="../buhin/img/authors/2.jpg" alt="author02" /> 
 							<span class="meta__date"><i class="fa fa-calendar-o"></i> 7 Apr</span>
 							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 文字数をカウントするなど</span>						</div>
-					</a>-->
+					</a>
 					<a class="grid__item" href="#">
 						<h2 class="title title--preview">サムスン、米自動車部品メーカー買収、韓国最大の８６００億円。</h2>
 						<div class="loader"></div>
 						<span class="category">一面</span>
 						<div class="meta meta--preview">
-							<img class="meta__avatar" src="../buhin/img/authors/2.jpg" alt="author02" /> 
+							<img class="meta__avatar" src="../buhin/img/authors/2.jpg" alt="author02" />
 							<span class="meta__date"><i class="fa fa-calendar-o"></i> 7 Apr</span>
 							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 文字数をカウントするなど</span>
 						</div>
@@ -213,9 +223,60 @@ document.write("このページの更新日時は、" + document.lastModified +"
 				</section>
 			</div>
 		</div><!-- /container -->
+   <div class="hero">
+      <div class="container">
+        <div class="big-demo" data-js="hero-demo">
+          <div class="ui-group">
+            <h3 class="ui-group__title">Filter</h3>
+            <div class="filters button-group js-radio-button-group">
+              <button class="button is-checked" data-filter="*">show all</button>
+              <button class="button" data-filter=".metal">metal</button>
+              <button class="button" data-filter=".transition">transition</button>
+              <button class="button" data-filter="ium">&#x2013;ium</button>
+            </div>
+          </div>
+          <!--<div class="grid">
+            <div class="element-item transition metal click" data-category="transition">
+              <p class="farticleCategory">一面</p>
+              <p class="articleSubCategory">きょうのことば</p>
+              <p class="headline">原発の事故処理費用―東電だけで賄いきれず（きょうのことば）</p>
+              <p class="firstArticle overflow">▽…原子力発電所で核燃料が溶け落ちる炉心溶融（メルトダウン）など過酷な事故が起こると、火力や水力発電所などより事故の被害規模や範囲がはるかに大きくなる。避難を余儀なくされた住民の土地・建物、身体的・精神的損害への賠償、放射性物質を原発周辺の土や建物から取り除く除染、運転を止めた原発を最終的に撤去するまでの廃炉について、中長期にわたり巨額の資金が必要になる。</p>
+            </div>
+            <div class="element-item metalloid click" data-category="metalloid">
+              <h5 class="name">Tellurium</h5>
+              <p class="symbol">Te</p>
+              <p class="number">52</p>
+              <p class="weight">127.6</p>
+            </div>
+            <div class="element-item post-transition metal click" data-category="post-transition">
+              <h5 class="name">Bismuth</h5>
+              <p class="symbol">Bi</p>
+              <p class="number">83</p>
+              <p class="weight">208.980</p>
+            </div>
+            <div class="element-item post-transition metal click" data-category="post-transition">
+              <h5 class="name">Lead</h5>
+              <p class="symbol">Pb</p>
+              <p class="number">82</p>
+              <p class="weight">207.2</p>
+            </div>
+            <div class="element-item transition metal click" data-category="transition">
+              <h5 class="name">Gold</h5>
+              <p class="symbol">Au</p>
+              <p class="number">79</p>
+              <p class="weight">196.967</p>
+            </div>
+          </div>-->
+      </div>
+   </div>
+          </div>
 		<script src="../buhin/js/classie.js"></script>
 		<script src="../buhin/js/main.js"></script>
 		<script src="js/info.js"></script>
 		<script src="js/jquery-1.10.2.min.js"></script>
+		<!-- Looking for isotope.js? Use isotope.pkgd.min.js -->
+		<!-- Isotope does NOT require jQuery. But it does make things easier -->
+		<script>window.jQuery || document.write('<script src="../buhin/js/jquery.min.js"><\/script>')</script>
+		<script src="../buhin/js/isotope-docs.min.js?3"></script>
 	</body>
 </html>
