@@ -7,7 +7,7 @@ $(function() {
 //    for(var i = 0; i < len; i++) {
     for(var i = 0; i < 1; i++) {
 
-	$('<a class="grid__item transition" href="#" data-category="transition"><h2 class="title title--preview">' + ulObj.append($("<a>").attr({"id":data[i].seqNo}).text(data[i].HeadLine)) + '</h2><div class="loader"></div><span class="category">一面</span><div class="meta meta--preview"><span class="meta__date"><i class="fa fa-calendar-o"></i> 7 Apr</span><span class="meta__reading-time"><i class="fa fa-clock-o"></i> 文字数をカウントするなど</span></div></div></a>');
+	$('<a class="grid__item transition" href="#" data-category="transition"><h2 class="title title--preview">' + data[i].HeadLine + '</h2><div class="loader"></div><span class="category">一面</span><div class="meta meta--preview"><span class="meta__date"><i class="fa fa-calendar-o"></i> 7 Apr</span><span class="meta__reading-time"><i class="fa fa-clock-o"></i> 文字数をカウントするなど</span></div></div></a>');
 
 
 
