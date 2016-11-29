@@ -854,11 +854,6 @@ p.overflow {
   fill: #222;
 }
 
-/* ---- desktop ---- */
-
-@media screen and ( min-width: 960px ) {
-
-}
 
 @charset "UTF-8";
 
@@ -933,28 +928,3 @@ p.overflow {
 .color-shape.wide, .color-shape.big { width: 150px; }
 .color-shape.tall, .color-shape.big { height: 150px; }
 
-/* grid-multi-item
-------------------------- */
-
-.grid-multi-item {
-  float: left;
-  width: 100px;
-  height: 100px;
-  background: #e6e5e4;
-  border: 2px solid #b6b5b4;
-  border-color: hsla(0, 0%, 0%, 0.4);
-}
-
-.grid-multi-item[data-color="blue"] { background: #19F; }
-.grid-multi-item[data-color="red"] { background: #D00; }
-.grid-multi-item[data-color="yellow"] { background: #FD0; }
-
-.grid-multi-item .number {
-  font-size: 4.0rem;
-  font-weight: 600;
-  color: white;
-  padding-top: 0.1em;
-  text-align: center;
-  line-height: 90px;
-  margin: 0;
-}
