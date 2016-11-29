@@ -860,7 +860,7 @@ button:focus {
   }
 }
 @media screen and (min-width: 900px) {
-  .grid {
+/*  .grid {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -869,9 +869,9 @@ button:focus {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-
+*/
   /* 2 columns */
-  .grid__item {
+/*  .grid__item {
     width: 50%;
     border: none;
   }
@@ -894,6 +894,7 @@ button:focus {
   .grid__item--loading.grid__item::before {
     opacity: 0;
   }
+*/
 }
 @media screen and (min-width: 1200px) {
   /* 3 columns */
