@@ -470,42 +470,6 @@ textarea {
 
 
 
-/* aaa
-------------------------- */
-	 .element-item.hover:hover {
-
-	     width: 400px;
-	     background-color: #f33;
-	 }
-	 .element-item.click {
-	 }
-	 .element-item.click.clicked {
-	     width: 98%;
-	     height: 400px;
-	     background-color: #f0ffff;
-
-    border: 3px solid rgba(99, 99, 35, 0.5);
-
-	 }
-
-/* site-footer
-------------------------- */
-
-.site-footer {
-  padding: 40px 0;
-  margin-top: 60px;
-}
-
-.site-footer__copy {
-  font-size: 1.2rem;
-}
-
-.site-footer .twitter-logo {
-  width: 1.3rem;
-  height: 1.3rem;
-  vertical-align: middle;
-}
-
 /*
 
 COLORS
@@ -525,75 +489,6 @@ green #1FB
           box-sizing: border-box;
 }
 
-/* font-size on html for rem*/
-html {
-  font-family: "游ゴシック", Meiryo UI, sans-serif;
-  font-size: 17px;
-  line-height: 1.5;
-  color: #7b7b7b
-}
-
-html.export {
-  font-family: "游ゴシック", Meiryo UI, sans-serif;
-  font-size: 15px;
-}
-
-body {
-/*  color: #7b7b7b
-  color: #EEE
-  background: #262524;*/
-}
-
-/* ---- links ---- */
-
-a,
-a code {
-  color: #FB4;
-  text-decoration: none;
-}
-
-a:hover,
-a:hover code {
-  color: #4BF;
-}
-
-a:active,
-a:active code {
-  color: #1FB;
-  background: #161615;
-}
-
-/* ---- headers ---- */
-
-h1, h2, h3, h4 {
-  line-height: 1.25;
-}
-
-h1 {
-  font-weight: bold;
-  font-size: 2.65em;
-  margin-bottom: 0.2em;
-  margin-top: 2.0em;
-}
-
-h1:first-child { margin-top: 0; }
-
-h2 {
-  font-weight: bold;
-}
-
-h3 {
-  font-weight: normal;
-  font-size: 1.4em;
-  margin-top: 2.0em;
-  margin-bottom: 0.8em;
-}
-
-h4 {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 1.1em;
-}
 
 /* ---- lists ---- */
 
@@ -709,27 +604,4 @@ p.overflow {
 }
 
 @charset "UTF-8";
-
-
-.color-shape {
-  width: 70px;
-  height: 70px;
-  margin: 5px;
-  float: left;
-}
- 
-.color-shape.round {
-  border-radius: 35px;
-}
- 
-.color-shape.big.round {
-  border-radius: 75px;
-}
- 
-.color-shape.red { background: red; }
-.color-shape.blue { background: blue; }
-.color-shape.yellow { background: yellow; }
- 
-.color-shape.wide, .color-shape.big { width: 150px; }
-.color-shape.tall, .color-shape.big { height: 150px; }
 
