@@ -221,6 +221,7 @@ button:focus {
   font-size: 0.75em;
 }
 
+
 /* Menu button for toggling the sidebar (appears on small screen) */
 .menu-toggle {
   position: fixed;
@@ -334,7 +335,6 @@ button:focus {
 /* grid item element and full content element styles */
 .title {
   margin: 0;
-/*  font-size: 1.875em;*/
   font-size: 1.5em;
   font-family: "Playfair Display", serif;
   text-align: center;

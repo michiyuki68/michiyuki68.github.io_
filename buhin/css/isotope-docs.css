@@ -776,58 +776,6 @@ p.overflow {
 
 
 
-/* hero
-------------------------- */
-
-
-.hero__title {
-  font-size: 2.6rem;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.1em;
-}
-
-.hero__tagline {
-  font-size: 1.6rem;
-  margin: 0 0 0.8em;
-  line-height: 1.2;
-}
-
-
-/* ---- hero__big-button ---- */
-
-.hero__big-button {
-  display: block;
-  position: relative;
-  padding: 10px;
-  font-size: 1.2rem;
-  background: #161615;
-  color: #FB4;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.hero__button-icon {
-  vertical-align: bottom;
-  width: 40px;
-  height: 40px;
-  margin-right: 6px;
-}
-
-.hero__button-icon path {
-  fill: #FB4;
-}
-
-/* hover */
-.hero__big-button:hover {
-  background: #4FB;
-  color: #222;
-}
-
-.hero__big-button:hover .hero__button-icon path {
-  fill: #222;
-}
-
 
 @charset "UTF-8";
 
