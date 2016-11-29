@@ -334,7 +334,8 @@ button:focus {
 /* grid item element and full content element styles */
 .title {
   margin: 0;
-  font-size: 1.875em;
+/*  font-size: 1.875em;*/
+  font-size: 1.0em;
   font-family: "Playfair Display", serif;
   text-align: center;
 }
@@ -802,6 +803,13 @@ button:focus {
   opacity: 1;
   pointer-events: auto;
 }
+
+
+/* 
+Max Width：
+ビューエリアの最大幅。このサイズより小さい場合に適用
+Min Width：
+ビューエリアの最小幅。このサイズより大きい場合に適用 */
 
 /* Viewport sizes based on column number and sidebar */
 /* 1 column */

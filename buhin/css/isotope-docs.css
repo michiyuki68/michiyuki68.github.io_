@@ -659,32 +659,6 @@ ul, ol {
 	-webkit-font-smoothing: antialiased;
 }
 
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
-.icon {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-.icon-file-download:before {
-	content: "\e001";
-}
-.icon-folder-download:before {
-	content: "\e002";
-}
-.icon-github:before {
-	content: "\e000";
-}
-
 
 
 /* element-item
