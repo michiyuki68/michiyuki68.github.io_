@@ -862,13 +862,6 @@ p.overflow {
 
 @charset "UTF-8";
 
-@media screen and ( max-width: 500px ) {
-
-/*aaaaaaaa*/
-.element-item {
-  width: 40%;
-}
-}
 
 /* ui-group
 ------------------------- */
