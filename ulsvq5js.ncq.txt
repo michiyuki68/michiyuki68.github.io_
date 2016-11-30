@@ -1,0 +1,13 @@
+﻿Revert "a"
+
+This reverts commit c01805222c074083ff4f02b21bb06ec9cdd41b9b.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   buhin/css/isotope-docs.css
+#
+
