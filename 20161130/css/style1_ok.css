@@ -221,7 +221,6 @@ button:focus {
   font-size: 0.75em;
 }
 
-
 /* Menu button for toggling the sidebar (appears on small screen) */
 .menu-toggle {
   position: fixed;
@@ -335,7 +334,7 @@ button:focus {
 /* grid item element and full content element styles */
 .title {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.875em;
   font-family: "Playfair Display", serif;
   text-align: center;
 }
@@ -804,13 +803,6 @@ button:focus {
   pointer-events: auto;
 }
 
-
-/* 
-Max Width：
-ビューエリアの最大幅。このサイズより小さい場合に適用
-Min Width：
-ビューエリアの最小幅。このサイズより大きい場合に適用 */
-
 /* Viewport sizes based on column number and sidebar */
 /* 1 column */
 /* 2 columns */
@@ -868,7 +860,7 @@ Min Width：
   }
 }
 @media screen and (min-width: 900px) {
-/*  .grid {
+  .grid {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -877,9 +869,9 @@ Min Width：
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-*/
+
   /* 2 columns */
-/*  .grid__item {
+  .grid__item {
     width: 50%;
     border: none;
   }
@@ -902,7 +894,6 @@ Min Width：
   .grid__item--loading.grid__item::before {
     opacity: 0;
   }
-*/
 }
 @media screen and (min-width: 1200px) {
   /* 3 columns */
