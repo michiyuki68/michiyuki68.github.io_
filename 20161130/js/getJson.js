@@ -16,5 +16,5 @@ ulObj.apppend('<a class="grid__item transition" href="#" data-category="transiti
 
     }
     }
-  });
+  );
 });
