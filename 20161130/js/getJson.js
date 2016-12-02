@@ -2,7 +2,7 @@ $(function() {
   $.getJSON("data.json" , function(data) {
     var
 //      ulObj = $("#demo"),
-      ulObj = $("grid"),
+      ulObj = $("#michi"),
       len = data.length;
 
     for(var i = 0; i < 1; i++) {
