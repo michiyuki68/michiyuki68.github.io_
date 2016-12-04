@@ -69,12 +69,12 @@
 	}
 
 	function initEvents() {
-alert('foreachに入る前');
+//alert('foreachに入る前');
 		[].slice.call(gridItems).forEach(function(item, pos) {
-alert('foreachはいった'+item);
+//alert('foreachはいった'+item);
 			// grid item click event
 			item.addEventListener('click', function(ev) {
-alert('test');
+//alert('test');
 
 				ev.preventDefault();
 				if(isAnimating || current === pos) {
@@ -211,6 +211,6 @@ alert('test');
 	}
 
 	init();
-alert('initの直後');
+//alert('initの直後');
 
 })();
