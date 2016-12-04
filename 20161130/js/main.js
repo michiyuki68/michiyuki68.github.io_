@@ -72,6 +72,8 @@
 		[].slice.call(gridItems).forEach(function(item, pos) {
 			// grid item click event
 			item.addEventListener('click', function(ev) {
+console.log('test');
+
 				ev.preventDefault();
 				if(isAnimating || current === pos) {
 					return false;
