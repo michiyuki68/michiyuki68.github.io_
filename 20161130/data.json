@@ -1,7 +1,7 @@
 [
 	{"seqNo":1,
 	 "name":"1番目ooo",
-	 "category":"一面",
+	 "category":"transition",
 	 "subCategory":"春秋",
 	 "date":"2016/11/15",
 	 "npCategory":"朝刊",
@@ -13,7 +13,7 @@
 	},
 	{"seqNo":2,
 	 "name":"2番目",
-	 "category":"一面",
+	 "category":"metal",
 	 "date":"2016/11/15",
 	 "npCategory":"朝刊",
 	 "HeadLine":"ヘッドラインなり",
