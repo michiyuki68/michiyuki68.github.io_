@@ -209,6 +209,6 @@ console.log('test');
 	}
 
 	init();
-alert('init‚Ì’¼Œã');
+alert('initã®ç›´å¾Œ');
 
 })();
