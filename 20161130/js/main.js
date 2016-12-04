@@ -69,10 +69,12 @@
 	}
 
 	function initEvents() {
+alert('foreachに入る前');
 		[].slice.call(gridItems).forEach(function(item, pos) {
+alert('foreachはいった');
 			// grid item click event
 			item.addEventListener('click', function(ev) {
-console.log('test');
+alert('test');
 
 				ev.preventDefault();
 				if(isAnimating || current === pos) {
