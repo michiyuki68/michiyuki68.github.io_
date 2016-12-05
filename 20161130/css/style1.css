@@ -286,7 +286,7 @@ button:focus {
   position: relative;
   font-size: 0.95em;
   font-style: italic;
-  font-family: "Playfair Display", serif;
+  font-family: "游ゴシック", serif;
   text-align: center;
   display: block;
 }
@@ -569,7 +569,7 @@ button:focus {
   font-style: italic;
   float: left;
   margin: 0 5px;
-  font-family: "Playfair Display", serif;
+  font-family: "游ゴシック", serif;
 }
 .meta--full .meta__category::before {
   content: "in ";
