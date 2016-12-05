@@ -19,9 +19,9 @@ $(function() {
       len = 3;
 
 //    for(var i = 0; i < len; i++) {
-        ulObj3.append($('<button class="button" data-filter=".' + 'itimen + '">' + '一面' + '</button>')).trigger('create');
+        ulObj3.append($('<button class="button" data-filter=".' + 'itimen' + '">' + '一面' + '</button>')).trigger('create');
 
-        ulObj3.append($('<button class="button" data-filter=".' + 'sougou + '">' + '総合' + '</button>')).trigger('create');
+        ulObj3.append($('<button class="button" data-filter=".' + 'sougou' + '">' + '総合' + '</button>')).trigger('create');
 
 //    }
 
