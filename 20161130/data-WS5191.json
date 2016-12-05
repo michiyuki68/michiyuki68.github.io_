@@ -1,0 +1,26 @@
+[
+	{"seqNo":1,
+	 "name":"1番目ooo",
+	 "category":"一面",
+	 "subCategory":"春秋",
+	 "date":"2016/11/15",
+	 "npCategory":"朝刊",
+	 "HeadLine":"これはjsonのヘッドライン",
+	 "FirstBody":"これはjsonのfirstbody",
+	 "BodyText":"ああああ\nいいいい",
+"img":"../buhin/img/authors/2.jpg",
+	 "kijiLength":"155"
+	},
+	{"seqNo":2,
+	 "name":"2番目",
+	 "category":"一面",
+	 "date":"2016/11/15",
+	 "npCategory":"朝刊",
+	 "HeadLine":"ヘッドラインなり",
+	 "FirstBody":"【リマ＝八十島綾平】日本とロシアの両政府は１８日午後（日本時間１９日早朝）、２国間経済協力の実現に向けた作業計画をまとめた。",
+"img":":../buhin/img/authors/2.jpg",
+	 "kijiLength":"146"
+	},
+
+  {"seqNo":3,"name":"佐藤"}
+]
