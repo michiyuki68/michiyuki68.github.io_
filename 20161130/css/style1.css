@@ -17,7 +17,7 @@ body {
   color: #7b7b7b;
   font-weight: 400;
   font-size: 16px;
-  font-family: "ŸàƒSƒVƒbƒN", Arial, sans-serif;
+  font-family: "æ¸¸ã‚´ã‚·ãƒƒã‚¯", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
@@ -65,7 +65,7 @@ button:focus {
   margin: 0.75em 0 0;
   font-size: 2em;
   line-height: 1;
-  font-family: "ŸàƒSƒVƒbƒN", serif;
+  font-family: "æ¸¸ã‚´ã‚·ãƒƒã‚¯", serif;
 }
 
 .sidebar h1 span {
@@ -234,7 +234,7 @@ button:focus {
 .title {
   margin: 0;
   font-size: 1.5em;
-  font-family: "ŸàƒSƒVƒbƒN", serif;
+  font-family: "æ¸¸ã‚´ã‚·ãƒƒã‚¯", serif;
   text-align: center;
 }
 
@@ -286,7 +286,7 @@ button:focus {
   position: relative;
   font-size: 0.95em;
   font-style: italic;
-  font-family: "ŸàƒSƒVƒbƒN", serif;
+  font-family: "æ¸¸ã‚´ã‚·ãƒƒã‚¯", serif;
   text-align: center;
   display: block;
 }
@@ -569,7 +569,7 @@ button:focus {
   font-style: italic;
   float: left;
   margin: 0 5px;
-  font-family: "ŸàƒSƒVƒbƒN", serif;
+  font-family: "æ¸¸ã‚´ã‚·ãƒƒã‚¯", serif;
 }
 .meta--full .meta__category::before {
   content: "in ";
@@ -693,10 +693,10 @@ button:focus {
 
 
 /* 
-Max WidthF
-ƒrƒ…[ƒGƒŠƒA‚ÌÅ‘å•B‚±‚ÌƒTƒCƒY‚æ‚è¬‚³‚¢ê‡‚É“K—p
-Min WidthF
-ƒrƒ…[ƒGƒŠƒA‚ÌÅ¬•B‚±‚ÌƒTƒCƒY‚æ‚è‘å‚«‚¢ê‡‚É“K—p */
+Max Width?F
+?r???[?G???A?ÌÅ‘å•?B???ÌƒT?C?Y?è¬”ãƒ»??????ê‡?É“K?p
+Min Width?F
+?r???[?G???A?ÌÅ????B???ÌƒT?C?Y?è¬”ãƒ»å‚«???ê‡?É“K?p */
 
 /* Viewport sizes based on column number and sidebar */
 /* 1 column */
