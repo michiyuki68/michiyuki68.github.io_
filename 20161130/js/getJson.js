@@ -28,6 +28,7 @@ console.log('２とおってるよ');
         ulObj3.append($('<button class="button" data-filter=".' + 'sougou' + '">' + '総合' + '</button>'));
         ulObj3.append($('<button class="button" data-filter=".' + 'seiji'  + '">' + '政治' + '</button>'));
         ulObj3.append($('<button class="button" data-filter=".' + 'syakai' + '">' + '社会' + '</button>'));
+        ulObj3.append($('<button class="button" data-filter=".' + 'kigyou' + '">' + '企業' + '</button>'));
 //    }
   }
 
