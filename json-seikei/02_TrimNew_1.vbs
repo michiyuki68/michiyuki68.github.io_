@@ -30,7 +30,7 @@ SetLogStream objWriteLogStream, True
 SendLog WScript.ScriptName & "を開始しました"
 
 rem ====================
-rem  メイン
+rem  step1
 rem ====================
 rem workフォルダの作成
 if (objFileSys.FolderExists(pathWork2))  Then
@@ -107,6 +107,22 @@ Next
 
 
 rem ====================
+rem  step2 
+rem ====================
+Set objFolder = objFileSys.GetFolder(pathWork2)
+
+rem FolderオブジェクトのFilesプロパティからFileオブジェクトを取得
+For Each objFile In objFolder.Files
+  SendLog "次のファイルの処理を開始：" & objFile.Name
+'     WScript.Echo objFile.Path
+
+  ReplaceRegPattern objFile.Path, "<h2 class=""title"">|</h2>|<div class=""col col10 artCSS_Highlight_on""><p>|</p><!--/.col-->", ""
+
+'  ReplaceRegPattern objFile.Path, "<br>", vbCrLf
+'  ReplaceRegPattern objFile.Path, "<br>", ""
+Next
+
+rem ====================
 rem  終了
 rem ====================
 intWaiteSeconds = 1
@@ -114,6 +130,50 @@ intPopup = objWShell.Popup(WScript.ScriptName & "が完了しました！" & vbCrLf & vb
                           intWaiteSeconds & "秒後にこのダイアログは消えます。", intWaiteSeconds, WScript.ScriptName, vbOKOnly + vbInformation + vbSystemModal)
 
 SendLog "終了"
+
+rem ====================
+rem  ReplaceRegPattern
+rem ====================
+Sub ReplaceRegPattern (strDstTextPath, regPattern, regText)
+
+  Dim objRegExp_Rep       rem  正規表現オブジェクト
+  Dim objMatches_Rep      rem  検索結果
+
+dim srcText
+dim dstText
+' dim regText
+
+dim objSrcDstTextStream
+
+  Set objRegExp_Rep = New RegExp
+  objRegExp_Rep.IgnoreCase = True
+  objRegExp_Rep.Global = True
+
+
+  rem テキストデータ読込
+  Set objSrcDstTextStream = objFileSys.OpenTextFile(strDstTextPath)
+  srcText = objSrcDstTextStream.ReadAll
+  rem 置換対象文字列
+  regText = regText
+  objRegExp_Rep.Pattern = regPattern
+
+Set objMatches_Rep = objRegExp_Rep.Execute(srcText)
+SendLog objMatches_Rep.count & "個マッチしました。"
+
+  rem テキスト変換
+  dstText = objRegExp_Rep.replace(srcText, regText)
+  objSrcDstTextStream.Close
+  rem 書き込み
+  Set objSrcDstTextStream = objFileSys.OpenTextFile(strDstTextPath, 2, True)
+  objSrcDstTextStream.WriteLine dstText
+  objSrcDstTextStream.Close
+
+  Set objSrcDstTextStream = Nothing
+  Set objMatches_Rep = Nothing
+  Set objRegExp_Rep = Nothing
+
+End Sub
+
 
 rem ====================
 rem  SendLog
