@@ -16,6 +16,7 @@ $(function() {
         ulObj2.append($('<article class="content__item"><span class="category category--full">Stories for humans</span><h2 class="title title--full">' + data[i].HeadLine + '</h2><div class="meta meta--full"><img alt="author01" class="meta__avatar" src="img/authors/1.png"><span class="meta__author">Matthew Walters</span><span class="meta__date"><i class="fa fa-calendar-o"></i> 9 Apr</span><span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span></div><p>' + data[i].FirstBody + '</p><p>' + '<p>ここまで</p></article>'));
 
     }
+alert('とおってるよ');
     var
       ulObj3 = $("#filterButtons"),
       len = 3;
