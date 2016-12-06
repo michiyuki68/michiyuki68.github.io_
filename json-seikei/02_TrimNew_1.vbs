@@ -38,12 +38,11 @@ if (objFileSys.FolderExists(pathWork2))  Then
 end if
 objFileSys.CreateFolder(pathWork2)
 
-rem c:\temp フォルダのオブジェクトを取得
+rem フォルダのオブジェクトを取得
 dim objFolder
 Set objFolder = objFileSys.GetFolder(pathWork)
 dim aaa
 dim objFile
-
 
 rem FolderオブジェクトのFilesプロパティからFileオブジェクトを取得
 For Each objFile In objFolder.Files
@@ -58,7 +57,7 @@ For Each objFile In objFolder.Files
   Set objRegExp = New RegExp
   objRegExp.Pattern = "<h2 class=""title"">.*</h2>|<div class=""col col10 artCSS_Highlight_on""><p>.*</p><!--/.col-->"
   objRegExp.IgnoreCase = True
-  objRegExp.Global = True
+  objRegExp.Global     = True
 
   Do While aaa.AtEndOfStream <> True
       dim strRead
@@ -149,10 +148,11 @@ dim objSrcDstTextStream
   objRegExp_Rep.IgnoreCase = True
   objRegExp_Rep.Global = True
 
-
   rem テキストデータ読込
   Set objSrcDstTextStream = objFileSys.OpenTextFile(strDstTextPath)
   srcText = objSrcDstTextStream.ReadAll
+
+SendLog srcText
   rem 置換対象文字列
   regText = regText
   objRegExp_Rep.Pattern = regPattern
