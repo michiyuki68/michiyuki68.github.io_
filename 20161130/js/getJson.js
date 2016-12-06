@@ -30,7 +30,7 @@ console.log('２とおってるよ');
         ulObj3.append($('<button class="button" data-filter=".' + 'syakai' + '">' + '社会' + '</button>'));
         ulObj3.append($('<button class="button" data-filter=".' + 'kigyou' + '">' + '企業' + '</button>'));
 //    }
-  }
+  });
 
   $.getJSON("data2.json" , function(data) {
     var
@@ -52,8 +52,7 @@ console.log('１１とおってるよ');
 
 console.log('２２とおってるよ');
 
-  }
+  });
 
 
-);
 });
