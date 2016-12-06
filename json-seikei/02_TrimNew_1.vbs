@@ -94,7 +94,7 @@ For Each objFile In objFolder.Files
             for i = 1 To iBarCnt
               strBar = strBar & "Å\"
             next
-            objNewTextStream.WriteLine "Body"
+            objNewTextStream.WriteLine "FirstBody"
             bTitle = False
           end if
       Next

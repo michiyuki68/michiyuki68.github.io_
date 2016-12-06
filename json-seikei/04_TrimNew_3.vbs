@@ -43,8 +43,13 @@ rem FolderオブジェクトのFilesプロパティからFileオブジェクトを取得
 For Each objFile In objFolder.Files
   SendLog "次のファイルの処理を開始：" & objFile.Name
 '     WScript.Echo objFile.Path
-rem 改行したいならココ
+rem firstbody改行したいならココ
 '  ReplaceRegPattern objFile.Path, "Body" & vbCrLf & "([^。]*。)", "Body" & vbCrLf & "$1" & vbCrLf
+
+  ReplaceRegPattern objFile.Path, "Headline"  & vbCrLf & "", "{""seqNo"":1,""HeadLine"":"""
+  ReplaceRegPattern objFile.Path, vbCrLf & "FirstBody"  & vbCrLf & "", """,""FirstBody"":"""
+  ReplaceRegPattern objFile.Path, vbCrLf, """},"
+
 Next
 
 
