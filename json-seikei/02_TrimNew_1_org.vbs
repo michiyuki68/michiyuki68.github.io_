@@ -55,12 +55,10 @@ For Each objFile In objFolder.Files
   Dim strMessage      rem  表示メッセージ
 
   Set objRegExp = New RegExp
-'  objRegExp.Pattern = "<h2 class=""title"">.*</h2>|<div class=""col col10 artCSS_Highlight_on""><p>.*</p><!--/.col-->"
-  objRegExp.Pattern = "<h2 class=""title"">.*</h2>|<div class=""col col10 artCSS_Highlight_on""><p>[^<br>]*<br>|<br>.*</p><!--/.col-->"
+  objRegExp.Pattern = "<h2 class=""title"">.*</h2>|<div class=""col col10 artCSS_Highlight_on""><p>.*</p><!--/.col-->"
+'  objRegExp.Pattern = "<h2 class=""title"">.*</h2>|<div class=""col col10 artCSS_Highlight_on""><p>[^<br>]*<br>|<br>.*</p><!--/.col-->"
   objRegExp.IgnoreCase = True
   objRegExp.Global     = True
-
-          objNewTextStream.WriteLine "["
 
   Do While aaa.AtEndOfStream <> True
       dim strRead
@@ -68,37 +66,40 @@ For Each objFile In objFolder.Files
       ' WScript.Echo strRead
       Set objMatches = objRegExp.Execute(strRead)
       bTitle = True
-
       For Each objMatch In objMatches
           ' strMessage = "　" & objMatch.FirstIndex + 1 & " 文字目に見つかりました。" & "一致した文字列は " & objMatch.Value & " です。"
            sendlog objMatch.Value
-sendlog Left(objMatch.Value, 18)
-if Left(objMatch.Value, 18) = "<h2 class=""title"">" then
-          objNewTextStream.WriteLine "{"
-          objNewTextStream.WriteLine """Headline""" & ":"
-          objNewTextStream.WriteLine """" & objMatch.Value & """"
-end if
+          if bTitle then
 
-if Left(objMatch.Value, 43) = "<div class=""col col10 artCSS_Highlight_on"">" then
-          objNewTextStream.WriteLine ","
-          objNewTextStream.WriteLine """FirstBody""" & ":"
-          objNewTextStream.WriteLine """" & mid(objMatch.Value, 1, len(objMatch.Value) - 4) & """"
-end if
+             dim strBar
+             dim iMidasiCnt
+             dim strBunrui
+             dim iBarCnt
+             strBar = ""
+             strBunrui = mid(objFileSys.getBaseName(objFile.Name), 4)
+             iMidasiCnt = len(strBunrui)
+             iBarCnt = 27 rem 初期値
+             dim i
+             for i = 1 To iBarCnt - iMidasiCnt - 2
+              strBar = strBar & "―"
+             next
 
-if Right(objMatch.Value, 12) = "<!--/.col-->" then
-          objNewTextStream.WriteLine ","
-          objNewTextStream.WriteLine """Body""" & ":"
-          objNewTextStream.WriteLine """" & mid(objMatch.Value, 5, len(objMatch.Value)) & """"
-          objNewTextStream.WriteLine "},"
-end if
+             objNewTextStream.WriteLine "Headline"
+          end if
 
+          objNewTextStream.WriteLine objMatch.Value
+
+          if bTitle then
+            strBar = ""
+            for i = 1 To iBarCnt
+              strBar = strBar & "―"
+            next
+            objNewTextStream.WriteLine "FirstBody"
+            bTitle = False
+          end if
       Next
-
   Loop
-
   aaa.Close
-
-          objNewTextStream.WriteLine "]"
 
   Set objMatches = Nothing
   Set objRegExp = Nothing

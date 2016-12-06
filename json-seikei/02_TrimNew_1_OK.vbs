@@ -60,45 +60,34 @@ For Each objFile In objFolder.Files
   objRegExp.IgnoreCase = True
   objRegExp.Global     = True
 
-          objNewTextStream.WriteLine "["
-
   Do While aaa.AtEndOfStream <> True
       dim strRead
       strRead = aaa.ReadLine
       ' WScript.Echo strRead
       Set objMatches = objRegExp.Execute(strRead)
       bTitle = True
-
       For Each objMatch In objMatches
           ' strMessage = "Å@" & objMatch.FirstIndex + 1 & " ï∂éöñ⁄Ç…å©Ç¬Ç©ÇËÇ‹ÇµÇΩÅB" & "àÍívÇµÇΩï∂éöóÒÇÕ " & objMatch.Value & " Ç≈Ç∑ÅB"
            sendlog objMatch.Value
 sendlog Left(objMatch.Value, 18)
 if Left(objMatch.Value, 18) = "<h2 class=""title"">" then
-          objNewTextStream.WriteLine "{"
-          objNewTextStream.WriteLine """Headline""" & ":"
-          objNewTextStream.WriteLine """" & objMatch.Value & """"
+          objNewTextStream.WriteLine "Headline"
+          objNewTextStream.WriteLine objMatch.Value
 end if
 
 if Left(objMatch.Value, 43) = "<div class=""col col10 artCSS_Highlight_on"">" then
-          objNewTextStream.WriteLine ","
-          objNewTextStream.WriteLine """FirstBody""" & ":"
-          objNewTextStream.WriteLine """" & mid(objMatch.Value, 1, len(objMatch.Value) - 4) & """"
+          objNewTextStream.WriteLine "FirstBody"
+          objNewTextStream.WriteLine mid(objMatch.Value, 1, len(objMatch.Value) - 4)
 end if
 
 if Right(objMatch.Value, 12) = "<!--/.col-->" then
-          objNewTextStream.WriteLine ","
-          objNewTextStream.WriteLine """Body""" & ":"
-          objNewTextStream.WriteLine """" & mid(objMatch.Value, 5, len(objMatch.Value)) & """"
-          objNewTextStream.WriteLine "},"
+          objNewTextStream.WriteLine "Body"
+          objNewTextStream.WriteLine mid(objMatch.Value, 5, len(objMatch.Value))
 end if
 
       Next
-
   Loop
-
   aaa.Close
-
-          objNewTextStream.WriteLine "]"
 
   Set objMatches = Nothing
   Set objRegExp = Nothing
