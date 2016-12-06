@@ -98,7 +98,7 @@ end if
   Loop
 
   aaa.Close
-          objNewTextStream.WriteLine """dummy"":""null"""
+          objNewTextStream.WriteLine "{" & """dummy"":""null""" & "}"
           objNewTextStream.WriteLine "]"
 
   Set objMatches = Nothing
