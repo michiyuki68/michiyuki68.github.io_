@@ -26,6 +26,8 @@ $(function() {
 //    for(var i = 0; i < len; i++) {
         ulObj3.append($('<button class="button" data-filter=".' + 'itimen' + '">' + '一面' + '</button>'));
         ulObj3.append($('<button class="button" data-filter=".' + 'sougou' + '">' + '総合' + '</button>'));
+        ulObj3.append($('<button class="button" data-filter=".' + 'seiji'  + '">' + '政治' + '</button>'));
+        ulObj3.append($('<button class="button" data-filter=".' + 'syakai' + '">' + '社会' + '</button>'));
 //    }
   });
 });
