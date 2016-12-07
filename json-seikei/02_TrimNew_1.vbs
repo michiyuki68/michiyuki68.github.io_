@@ -75,7 +75,7 @@ For Each objFile In objFolder.Files
 sendlog Left(objMatch.Value, 18)
 if Left(objMatch.Value, 18) = "<h2 class=""title"">" then
           objNewTextStream.WriteLine "{"
-          objNewTextStream.WriteLine """Category""" & ":" & """itimen""" & ","
+          objNewTextStream.WriteLine """Category""" & ":" & """" & mid(objFile.Name, 4, len(objFile.Name) - 7) & """" & ","
           objNewTextStream.WriteLine """Headline""" & ":"
           objNewTextStream.WriteLine """" & objMatch.Value & """"
 end if
