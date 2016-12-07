@@ -569,7 +569,7 @@ button:focus {
   font-style: italic;
   float: left;
   margin: 0 5px;
-  font-family: "游ゴシック", serif;
+  font-family: "游明朝", serif;
 }
 .meta--full .meta__category::before {
   content: "in ";
