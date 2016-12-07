@@ -105,6 +105,9 @@ end if
   Loop
 
   aaa.Close
+          if bBodyAri = false then
+            objNewTextStream.WriteLine "},"
+          end if
 '          objNewTextStream.WriteLine "{" & """dummy"":""null""" & "}"
 '          objNewTextStream.WriteLine "]"
 
