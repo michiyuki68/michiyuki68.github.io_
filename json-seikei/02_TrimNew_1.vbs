@@ -56,12 +56,14 @@ For Each objFile In objFolder.Files
 
   Set objRegExp = New RegExp
 '  objRegExp.Pattern = "<h2 class=""title"">.*</h2>|<div class=""col col10 artCSS_Highlight_on""><p>.*</p><!--/.col-->"
-  objRegExp.Pattern = "<h2 class=""title"">.*</h2>|<div class=""col col10 artCSS_Highlight_on""><p>[^<br>]*<br>|<br>.*</p><!--/.col-->"
+  objRegExp.Pattern = "<h2 class=""title"">.*</h2>|<div class=""col col10 artCSS_Highlight_on""><p>[^<br>]*(<br>|</p>)|<br>.*</p><!--/.col-->"
   objRegExp.IgnoreCase = True
   objRegExp.Global     = True
 
-          objNewTextStream.WriteLine "["
+'          objNewTextStream.WriteLine "["
 
+Dim bBodyAri
+bBodyAri = True
   Do While aaa.AtEndOfStream <> True
       dim strRead
       strRead = aaa.ReadLine
@@ -74,10 +76,14 @@ For Each objFile In objFolder.Files
            sendlog objMatch.Value
 sendlog Left(objMatch.Value, 18)
 if Left(objMatch.Value, 18) = "<h2 class=""title"">" then
+          if bBodyAri = false then
+            objNewTextStream.WriteLine "},"
+          end if
           objNewTextStream.WriteLine "{"
           objNewTextStream.WriteLine """Category""" & ":" & """" & mid(objFile.Name, 4, len(objFile.Name) - 7) & """" & ","
           objNewTextStream.WriteLine """Headline""" & ":"
           objNewTextStream.WriteLine """" & objMatch.Value & """"
+          bBodyAri = false
 end if
 
 if Left(objMatch.Value, 43) = "<div class=""col col10 artCSS_Highlight_on"">" then
@@ -87,6 +93,7 @@ if Left(objMatch.Value, 43) = "<div class=""col col10 artCSS_Highlight_on"">" th
 end if
 
 if Right(objMatch.Value, 12) = "<!--/.col-->" then
+          bBodyAri = true
           objNewTextStream.WriteLine ","
           objNewTextStream.WriteLine """Body""" & ":"
           objNewTextStream.WriteLine """" & mid(objMatch.Value, 5, len(objMatch.Value)) & """"
@@ -98,8 +105,8 @@ end if
   Loop
 
   aaa.Close
-          objNewTextStream.WriteLine "{" & """dummy"":""null""" & "}"
-          objNewTextStream.WriteLine "]"
+'          objNewTextStream.WriteLine "{" & """dummy"":""null""" & "}"
+'          objNewTextStream.WriteLine "]"
 
   Set objMatches = Nothing
   Set objRegExp = Nothing
