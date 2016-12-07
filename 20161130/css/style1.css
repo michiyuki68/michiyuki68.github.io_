@@ -195,7 +195,7 @@ button:focus {
 
 /* Grid item */
 .grid__item {
-  padding: 45px 25px 30px;
+  padding: 45px 5px 30px;
   position: relative;
   color: inherit;
   background: #fff;
