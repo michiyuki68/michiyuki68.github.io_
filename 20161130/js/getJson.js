@@ -2,7 +2,7 @@ $(function() {
   $.getJSON("data.json" , function(data) {
 console.log('data.jsonとおってるよ');
     var
-      ulObj1 = $("#HeadLines"),
+      ulObj1 = $("#Headlines"),
       ulObj2 = $("#Bodies"),
       len = data.length;
 
