@@ -10,12 +10,12 @@ $(function() {
 
 //        ulObj1.append($('<a class="grid__item ' + 'itimen' + '" href="#" data-category="' + data[i].category + '"><h2 class="title title--preview">' + data[i].Headline + '</h2><div class="loader"></div><span class="category">' + 'itimen' + '</span><div class="meta meta--preview"><img class="meta__avatar" src="img/authors/1.png" alt="author01"/><span class="meta__date"><i class="fa fa-calendar-o"></i>' + document.lastModified + '</span><span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span></div></a>'));
 
-console.log('１とおってるよ');
+console.log('data.json１とおってるよ');
 
         ulObj2.append($('<article class="content__item"><span class="category category--full">Stories for humans</span><h2 class="title title--full">' + data[i].Headline + '</h2><div class="meta meta--full"><img alt="author01" class="meta__avatar" src="img/authors/1.png"><span class="meta__author">Matthew Walters</span><span class="meta__date"><i class="fa fa-calendar-o"></i> 9 Apr</span><span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span></div><p>' + data[i].FirstBody + '</p><p>' + data[i].Body +'<p>ここまで</p></article>'));
     }
 
-console.log('２とおってるよ');
+console.log('data.json２とおってるよ');
 
     var
       ulObj3 = $("#filterButtons"),
@@ -42,13 +42,13 @@ console.log('２とおってるよ');
 
 //        ulObj1.append($('<a class="grid__item ' + 'itimen' + '" href="#" data-category="' + data[i].category + '"><h2 class="title title--preview">' + data[i].Headline + '</h2><div class="loader"></div><span class="category">' + 'itimen' + '</span><div class="meta meta--preview"><img class="meta__avatar" src="img/authors/1.png" alt="author01"/><span class="meta__date"><i class="fa fa-calendar-o"></i>' + document.lastModified + '</span><span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span></div></a>'));
 
-console.log('１１とおってるよ');
+console.log('data2.json１１とおってるよ');
 
 //        ulObj5.append($('<article class="content__item"><span class="category category--full">Stories for humans</span><h2 class="title title--full">' + data[i].Headline + '</h2><div class="meta meta--full"><img alt="author01" class="meta__avatar" src="img/authors/1.png"><span class="meta__author">Matthew Walters</span><span class="meta__date"><i class="fa fa-calendar-o"></i> 9 Apr</span><span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span></div><p>' + data[i].FirstBody + '</p><p>' + data[i].Body +'<p>ここまで</p></article>'));
 
     }
 
-console.log('２２とおってるよ');
+console.log('data2.json２２とおってるよ');
 
   });
 
