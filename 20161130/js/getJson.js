@@ -1,5 +1,6 @@
 $(function() {
   $.getJSON("data.json" , function(data) {
+console.log('data.jsonとおってるよ');
     var
       ulObj1 = $("#HeadLines"),
       ulObj2 = $("#Bodies"),
