@@ -1,13 +1,13 @@
 $(function() {
-  $.getJSON("data.json" , function(data) {
-console.log('data.jsonとおってるよ');
+  $.getJSON("data2.json" , function(data) {
+console.log('data2.jsonとおってるよ');
     var
       ulObj1 = $("#Headlines"),
       ulObj2 = $("#Bodies"),
       len = data.length;
 
     for(var i = 0; i < len; i++) {
-console.log('data.json０とおってるよ');
+console.log('data2.json０とおってるよ');
 //        ulObj1.append($('<a class="grid__item ' + data[i].Category + '" href="#" data-category="' + data[i].category + '"><h2 class="title title--preview">' + data[i].Headline + '</h2><div class="loader"></div><span class="category">' + data[i].Category + '</span><div class="meta meta--preview"><img class="meta__avatar" src="img/authors/1.png" alt="author01"/><span class="meta__date"><i class="fa fa-calendar-o"></i>' + document.lastModified + '</span><span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span></div></a>'));
 
         ulObj1.append($('<a class="grid__item ' + data[i].Category + '" href="#" data-category="' + data[i].category + '"><h2 class="title title--preview">' + data[i].Headline + '</h2><div class="loader"></div>'));
