@@ -28,10 +28,12 @@ console.log('data.json２とおってるよ');
 
 //    for(var i = 0; i < len; i++) {
         ulObj3.append($('<button class="button" data-filter=".' + '一面' + '">' + '一面' + '</button>'));
-        ulObj3.append($('<button class="button" data-filter=".' + '総合' + '">' + '総合' + '</button>'));
-        ulObj3.append($('<button class="button" data-filter=".' + '政治' + '">' + '政治' + '</button>'));
+        ulObj3.append($('<button class="button" data-filter=".' + '夕刊総合' + '">' + '夕刊総合' + '</button>'));
         ulObj3.append($('<button class="button" data-filter=".' + '社会' + '">' + '社会' + '</button>'));
-        ulObj3.append($('<button class="button" data-filter=".' + '企業' + '">' + '企業' + '</button>'));
+        ulObj3.append($('<button class="button" data-filter=".' + '生活社会' + '">' + '生活社会' + '</button>'));
+        ulObj3.append($('<button class="button" data-filter=".' + 'スポーツ' + '">' + 'スポーツ' + '</button>'));
+        ulObj3.append($('<button class="button" data-filter=".' + 'マーケット投資' + '">' + 'マーケット投資' + '</button>'));
+
 //    }
   });
 
