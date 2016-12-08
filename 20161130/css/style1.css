@@ -233,7 +233,7 @@ button:focus {
 /* grid item element and full content element styles */
 .title {
   margin: 0;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-family: "游明朝", serif;
   text-align: center;
 }
@@ -547,7 +547,7 @@ button:focus {
 }
 
 .title--full {
-  font-size: 3.25em;
+  font-size: 1.25em;
 }
 
 .meta--full {
