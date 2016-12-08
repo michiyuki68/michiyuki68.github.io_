@@ -41,7 +41,7 @@ console.log('data.json２とおってるよ');
       len = data.length;
 
     for(var i = 0; i < len; i++) {
-        ulObj3.append($('<p>' + data[i].Headline + '</p>'));
+        ulObj4.append($('<p>' + data[i].Headline + '</p>'));
     }
 
   });
