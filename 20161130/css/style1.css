@@ -562,7 +562,7 @@ button:focus {
   margin-bottom: 20px;
 }
 .meta--full .meta__author::before {
-  content: 'by ';
+/*  content: 'by ';*/
   font-weight: normal;
 }
 .meta--full .meta__category {
