@@ -24,7 +24,7 @@ console.log('data.json２とおってるよ');
 
     var
       ulObj3 = $("#filterButtons"),
-      len = 3;
+      len = data.length;
 
 //    for(var i = 0; i < len; i++) {
         ulObj3.append($('<button class="button" data-filter=".' + '一面' + '">' + '一面' + '</button>'));
@@ -33,6 +33,17 @@ console.log('data.json２とおってるよ');
         ulObj3.append($('<button class="button" data-filter=".' + '社会' + '">' + '社会' + '</button>'));
         ulObj3.append($('<button class="button" data-filter=".' + '企業' + '">' + '企業' + '</button>'));
 //    }
+
+
+
+    var
+      ulObj4 = $("#michi"),
+      len = data.length;
+
+    for(var i = 0; i < len; i++) {
+        ulObj3.append($('<p>' + data[i].Headline + '</p>'));
+    }
+
   });
 
 });
