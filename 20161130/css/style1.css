@@ -335,8 +335,8 @@ button:focus {
 }
 
 .grid__item--animate .category {
-  -webkit-transition-delay: 0.15s;
-  transition-delay: 0.15s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
   opacity: 0;
   -webkit-transform: translate3d(0, -40px, 0);
   transform: translate3d(0, -40px, 0);
@@ -434,13 +434,13 @@ button:focus {
 }
 
 .grid__item--loading .meta__date {
-  -webkit-transition-delay: 0.17s;
-  transition-delay: 0.17s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 
 .grid__item--loading .meta__reading-time {
-  -webkit-transition-delay: 0.24s;
-  transition-delay: 0.24s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 
 .grid__item--loading .meta__avatar,
