@@ -24,15 +24,23 @@ console.log('data.json２とおってるよ');
 
     var
       ulObj3 = $("#filterButtons"),
-      len = data.length;
+      len = data.length,
+      beforCategory;
 
-//    for(var i = 0; i < len; i++) {
-        ulObj3.append($('<button class="button" data-filter=".' + '一面' + '">' + '一面' + '</button>'));
-        ulObj3.append($('<button class="button" data-filter=".' + '総合' + '">' + '総合' + '</button>'));
-        ulObj3.append($('<button class="button" data-filter=".' + '政治' + '">' + '政治' + '</button>'));
-        ulObj3.append($('<button class="button" data-filter=".' + '社会' + '">' + '社会' + '</button>'));
-        ulObj3.append($('<button class="button" data-filter=".' + '企業' + '">' + '企業' + '</button>'));
-//    }
+beforCategory = 'dummy';
+
+    for(var i = 0; i < len; i++) {
+console.log('カテゴリとおってるよ');
+if (data[i].Category != beforCategory){
+  console.log('違うので入った');
+        ulObj3.append($('<button class="button" data-filter=".' + data[i].Category + '">' + data[i].Category + '</button>'));
+  beforCategory = data[i].Category;
+}
+//        ulObj3.append($('<button class="button" data-filter=".' + '総合' + '">' + '総合' + '</button>'));
+//        ulObj3.append($('<button class="button" data-filter=".' + '政治' + '">' + '政治' + '</button>'));
+//        ulObj3.append($('<button class="button" data-filter=".' + '社会' + '">' + '社会' + '</button>'));
+//        ulObj3.append($('<button class="button" data-filter=".' + '企業' + '">' + '企業' + '</button>'));
+    }
 
 
 
