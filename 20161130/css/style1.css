@@ -104,7 +104,6 @@ button:focus {
 /* Top bar above the grid */
 .top-bar {
  position: fixed;
-   position: absolute;      
   background: #fff;
   width: 100%;
   line-height: 1;
