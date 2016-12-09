@@ -120,6 +120,7 @@ button:focus {
   font-size: 0.75em;
 }
 
+
 /* Menu button for toggling the sidebar (appears on small screen) */
 .menu-toggle {
   position: fixed;

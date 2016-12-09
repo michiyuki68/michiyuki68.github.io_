@@ -28,12 +28,17 @@ console.log('data.json２とおってるよ');
       beforCategory;
       beforCategory = 'dummy';
 
+      //すべて
+      ulObj3.append($('<button class="button is-checked" data-filter="*">show all</button>'));
+
     for(var i = 0; i < len; i++) {
       if (data[i].Category != beforCategory){
         ulObj3.append($('<button class="button" data-filter=".' + data[i].Category + '">' + data[i].Category + '</button>'));
         beforCategory = data[i].Category;
       }
     }
+      //未分類
+      ulObj3.append($('<button class="button" data-filter="other">未分類</button>'));
 
 
     var
