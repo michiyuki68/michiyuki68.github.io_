@@ -71,10 +71,10 @@
 	function initEvents() {
 //console('foreachに入る前');
 		[].slice.call(gridItems).forEach(function(item, pos) {
-console.log('foreachはいった'+item);
+//console.log('foreachはいった'+item);
 			// grid item click event
 			item.addEventListener('click', function(ev) {
-console('test');
+//console('test');
 
 				ev.preventDefault();
 				if(isAnimating || current === pos) {
