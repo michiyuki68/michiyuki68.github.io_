@@ -55,11 +55,11 @@ if (data[i].FirstBody.length > limitNo){
 
 var HeadlinePreview;
 limitNo = 16;
-if (data[i].FirstBody.length > limitNo){
-  HeadlinePreview = data[i].FirstBody.substr(0, limitNo) + '…';
-}
 
     for(var i = 0; i < len; i++) {
+if (data[i].Headline.length > limitNo){
+  HeadlinePreview = data[i].Headline.substr(0, limitNo) + '…';
+}
         ulObj4.append($('<p>' + HeadlinePreview + '</p>'));
     }
 
