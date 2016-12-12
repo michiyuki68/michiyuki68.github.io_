@@ -54,7 +54,7 @@ if (data[i].FirstBody.length > limitNo){
       len = data.length;
 
 var HeadlinePreview;
-limitNo = 16;
+limitNo = 14;
 
     for(var i = 0; i < len; i++) {
 if (data[i].Headline.length > limitNo){
