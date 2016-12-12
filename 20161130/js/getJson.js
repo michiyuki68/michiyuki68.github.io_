@@ -46,15 +46,21 @@ if (data[i].FirstBody.length > limitNo){
       }
     }
       //未分類
-      ulObj3.append($('<button class="button" data-filter="other">未分類</button>'));
+//      ulObj3.append($('<button class="button" data-filter="other">未分類</button>'));
 
 
     var
       ulObj4 = $("#michi"),
       len = data.length;
 
+var HeadlinePreview;
+limitNo = 16;
+if (data[i].FirstBody.length > limitNo){
+  HeadlinePreview = data[i].FirstBody.substr(0, limitNo) + '…';
+}
+
     for(var i = 0; i < len; i++) {
-        ulObj4.append($('<p>' + data[i].Headline + '</p>'));
+        ulObj4.append($('<p>' + HeadlinePreview + '</p>'));
     }
 
   });
