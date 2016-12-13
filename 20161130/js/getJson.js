@@ -22,7 +22,9 @@ var bodyLength;
 //bodyLength = 149;
 //console.log(data[i].FirstBody.length);
 //console.log(data[i].Body.isEmptyObject);
-bodyLength = data[i].FirstBody.length + data[i].Body.length;
+if (data[i].Body != null){
+  bodyLength = data[i].FirstBody.length + data[i].Body.length;
+}
 //console.log(bodyLength);
 //        ulObj1.append($('<a class="grid__item ' + data[i].Category + '" href="#" data-category="' + data[i].category + '"><h2 class="title title--preview">' + data[i].Headline + '</h2><div class="loader"></div><div class="meta">' + firstBodyPreview + '</div>'));
 
