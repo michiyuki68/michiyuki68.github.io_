@@ -19,13 +19,14 @@ if (data[i].FirstBody.length > limitNo){
 }
 
 var bodyLength;
+bodyLength = 149;
 //console.log(data[i].FirstBody.length);
-console.log(data[i].Body.isEmptyObject);
+//console.log(data[i].Body.isEmptyObject);
 //bodyLength = data[i].FirstBody.length + data[i].Body.length;
 //console.log(bodyLength);
 //        ulObj1.append($('<a class="grid__item ' + data[i].Category + '" href="#" data-category="' + data[i].category + '"><h2 class="title title--preview">' + data[i].Headline + '</h2><div class="loader"></div><div class="meta">' + firstBodyPreview + '</div>'));
 
-//        ulObj1.append($('<a class="grid__item ' + data[i].Category + '" href="#" data-category="' + data[i].category + '"><h2 class="title title--preview">' + data[i].Headline + '</h2><div class="loader"><span class="category">' + data[i].Category + '</span><div class="meta meta==preview"><span class="meta__date"><i class="fa fa-calendar-o"></i>' + document.lastModified +' </span><span class="meta__reading-time"><i class="fa fa-clock-o"></i>' + bodyLength + '文字' +  '</span></div>'));
+        ulObj1.append($('<a class="grid__item ' + data[i].Category + '" href="#" data-category="' + data[i].category + '"><h2 class="title title--preview">' + data[i].Headline + '</h2><div class="loader"><span class="category">' + data[i].Category + '</span><div class="meta meta==preview"><span class="meta__date"><i class="fa fa-calendar-o"></i>' + document.lastModified +' </span><span class="meta__reading-time"><i class="fa fa-clock-o"></i>' + bodyLength + '文字' +  '</span></div>'));
 
 
 
