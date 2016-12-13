@@ -76,6 +76,7 @@ button:focus {
 }
 
 .sidebar p {
+  margin: 0.25em 0 0;
   font-size: 0.7em;
   padding: 0em 0em;
 }
