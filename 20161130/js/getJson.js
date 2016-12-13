@@ -34,7 +34,7 @@ $(function() {
     var ulObj4 = $("#michi"),
       len = data.length;
     var HeadlinePreview;
-    limitNo = 14;
+    limitNo = 20;
     for (var i = 0; i < len; i++) {
       if (data[i].Headline.length > limitNo) {
         HeadlinePreview = data[i].Headline.substr(0, limitNo) + '…';
