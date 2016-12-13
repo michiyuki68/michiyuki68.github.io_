@@ -46,6 +46,8 @@ button:focus {
   outline: none;
 }
 
+
+
 /* Sidebar */
 .sidebar {
   text-align: center;
@@ -71,6 +73,10 @@ button:focus {
 
 .sidebar h1 span {
   display: block;
+}
+
+.sidebar p {
+  font-size: 0.5em;
 }
 
 
