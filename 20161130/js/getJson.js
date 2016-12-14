@@ -39,7 +39,7 @@ $(function() {
       if (data[i].Headline.length > limitNo) {
         HeadlinePreview = data[i].Headline.substr(0, limitNo) + '…';
       }
-      ulObj4.append($('<p>' + HeadlinePreview + '</p>'));
+      ulObj4.append($('<a href="#seq5">' + HeadlinePreview + '</a>'));
     }
   });
 });
