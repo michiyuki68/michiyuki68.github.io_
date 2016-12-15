@@ -35,7 +35,10 @@
 			<nav class="codrops-demos">
 				<span><a class="current-demo" href="index.html">朝刊</a> <a href="index2.html">夕刊</a></span>
 			</nav><span></span>
-			<span></span>
+			<div class="related">
+				<span></span>
+				<h3><span>Related Demos</span></h3><span><a href="http://tympanus.net/Development/BookPreview/">Book Preview</a> <a href="http://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/">Thumbnail Grid</a> <a href="http://tympanus.net/Development/3DGridEffect/">3D Grid Effect</a></span>
+			</div><span></span>
 <!--	<div class="big-demo" data-js="hero-demo">
 		<div class="ui-group">
 			<h3 class="ui-group__title">Filter</h3>
