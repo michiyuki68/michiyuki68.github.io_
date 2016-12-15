@@ -29,7 +29,7 @@
 			</div>
 			<p></p>
 			<script language="JavaScript">
-			   document.write("更新日時は、" + document.lastModified +"です。")
+			   document.write("このページの更新日時は、" + document.lastModified +"です。")
 			</script>
 			<h1><span>Animated <span>Grid Layout</span></span></h1>
 			<nav class="codrops-demos">
@@ -89,9 +89,9 @@
 						</div>
 					</div>
 				</div>
-<!--				<footer class="page-meta">
+				<footer class="page-meta">
 					<span>Load more...</span>
-				</footer>-->
+				</footer>
 			</section>
 			<section class="content">
 				<div class="scroll-wrap" id="Bodies">
