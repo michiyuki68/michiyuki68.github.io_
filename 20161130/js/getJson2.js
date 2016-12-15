@@ -3,6 +3,7 @@ $(function() {
     var ulObj1 = $("#Headlines"),
       ulObj2 = $("#Bodies"),
       len = data.length;
+cosole.log('111');
     for (var i = 0; i < len; i++) {
       var firstBodyPreview,
         limitNo;
