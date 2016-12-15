@@ -63,7 +63,7 @@
 							<div class="ui-group">
 								<h3 class="ui-group__title">Filter</h3>
 								<script language="JavaScript">
-									document.write("更新日時は、" + document.lastModified +"です。　　　　　　　　　　")
+									document.write("更新日時は、" + document.lastModified +"です。　　　　　　　　　　　　　　　　　　")
 								</script>
 								<div class="filters button-group js-radio-button-group" id="filterButtons">
 
