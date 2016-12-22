@@ -6,7 +6,7 @@ $(function() {
     for (var i = 0; i < len; i++) {
       var firstBodyPreview,
         limitNo;
-      limitNo = 300;
+      limitNo = 200;
       if (data[i].FirstBody.length > limitNo) {
         firstBodyPreview = data[i].FirstBody.substr(0, limitNo) + '…';
       }
