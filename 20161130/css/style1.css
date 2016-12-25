@@ -827,11 +827,11 @@ button:focus {
 #pageTop a {
   display: block;
   z-index: 999;
-  padding: 8px 0 0 8px;
+  padding: 6px 0 0 6px;
   border-radius: 30px;
   width: 35px;
   height: 35px;
-  background-color: #9FD6D2;
+  background-color: #81c483;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
