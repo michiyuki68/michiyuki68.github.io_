@@ -756,6 +756,67 @@ button:focus {
   }
 }
 
+@media screen and (min-width: 900px) {
+  .grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  /* 2 columns */
+  .grid__item {
+    width: 50%;
+    border: none;
+  }
+
+  .grid__item::before {
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    border: 1px solid rgba(74, 74, 74, 0.075);
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+
+  .grid__item:hover::before,
+  .grid__item:focus::before {
+    border: 3px solid rgba(129, 196, 131, 0.5);
+  }
+
+  .grid__item--loading.grid__item::before {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* 3 columns */
+  .grid__item {
+    width: 33.333%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  /* 4 columns */
+  .grid__item {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  /* 5 columns */
+  .grid__item {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 2100px) {
+  /* 6 columns */
+  .grid__item {
+    width: 16.66%;
+  }
+}
+
 /* small screen changes for sidebar (it becomes an off-canvas menu) */
 @media screen and (max-width: 599px) {
   .sidebar {
