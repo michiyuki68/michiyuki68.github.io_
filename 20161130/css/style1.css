@@ -17,7 +17,7 @@ body {
   color: #1C1C1C;
   font-weight: 400;
   font-size: 17px;
-  font-family: "游ゴシック", Arial, sans-serif;
+  font-family: "メイリオ", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
@@ -294,7 +294,7 @@ button:focus {
   position: relative;
   font-size: 0.95em;
   font-style: italic;
-  font-family: "游ゴシック", serif;
+  font-family: "メイリオ", serif;
   text-align: center;
   display: block;
 }
